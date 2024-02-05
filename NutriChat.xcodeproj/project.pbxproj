@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		E5692E4F2B7079F0001E1885 /* NutriChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */; };
-		E5692E532B7079F0001E1885 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E522B7079F0001E1885 /* Item.swift */; };
 		E5692E552B7079F2001E1885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5692E542B7079F2001E1885 /* Assets.xcassets */; };
 		E5692E582B7079F2001E1885 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5692E572B7079F2001E1885 /* Preview Assets.xcassets */; };
 		E5692E5F2B707BC3001E1885 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E5E2B707BC3001E1885 /* MainView.swift */; };
+		E5692E632B70ABD1001E1885 /* MessgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E622B70ABD1001E1885 /* MessgeView.swift */; };
+		E5692E662B70AC3C001E1885 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E652B70AC3C001E1885 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E5692E4B2B7079F0001E1885 /* NutriChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriChatApp.swift; sourceTree = "<group>"; };
-		E5692E522B7079F0001E1885 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E5692E542B7079F2001E1885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5692E572B7079F2001E1885 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5692E5E2B707BC3001E1885 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E5692E622B70ABD1001E1885 /* MessgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessgeView.swift; sourceTree = "<group>"; };
+		E5692E652B70AC3C001E1885 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +55,12 @@
 		E5692E4D2B7079F0001E1885 /* NutriChat */ = {
 			isa = PBXGroup;
 			children = (
+				E5692E642B70AC27001E1885 /* Model */,
+				E5692E612B70ABC3001E1885 /* Componets */,
+				E5692E602B70ABB1001E1885 /* Views */,
 				E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */,
-				E5692E522B7079F0001E1885 /* Item.swift */,
 				E5692E542B7079F2001E1885 /* Assets.xcassets */,
 				E5692E562B7079F2001E1885 /* Preview Content */,
-				E5692E5E2B707BC3001E1885 /* MainView.swift */,
 			);
 			path = NutriChat;
 			sourceTree = "<group>";
@@ -68,6 +71,30 @@
 				E5692E572B7079F2001E1885 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E5692E602B70ABB1001E1885 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E5692E5E2B707BC3001E1885 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E5692E612B70ABC3001E1885 /* Componets */ = {
+			isa = PBXGroup;
+			children = (
+				E5692E622B70ABD1001E1885 /* MessgeView.swift */,
+			);
+			path = Componets;
+			sourceTree = "<group>";
+		};
+		E5692E642B70AC27001E1885 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5692E652B70AC3C001E1885 /* Message.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5692E5F2B707BC3001E1885 /* MainView.swift in Sources */,
-				E5692E532B7079F0001E1885 /* Item.swift in Sources */,
+				E5692E662B70AC3C001E1885 /* Message.swift in Sources */,
 				E5692E4F2B7079F0001E1885 /* NutriChatApp.swift in Sources */,
+				E5692E632B70ABD1001E1885 /* MessgeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
