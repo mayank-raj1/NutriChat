@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-struct Message: Hashable{
+struct Message: Hashable, Identifiable{
     let id  = UUID()
     var message: String
     var isUser: Bool
@@ -17,4 +17,6 @@ struct Message: Hashable{
 struct MocDate{
     static var message = Message(message: "Hey", isUser: true)
     static var messageRecive = Message(message: "How are you?", isUser: false)
+    
+    static var chat = ChatHistory(messages: [message, messageRecive, message, messageRecive])
 }

@@ -9,10 +9,14 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            ChatWindowView()
+            Divider().frame(height: 12)
+            SendField().padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+        }
     }
 }
 
 #Preview {
-    MainView()
+    MainView().environmentObject(MocDate.chat)
 }
