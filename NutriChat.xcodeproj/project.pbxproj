@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		E5692E4F2B7079F0001E1885 /* NutriChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */; };
-		E5692E512B7079F0001E1885 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E502B7079F0001E1885 /* ContentView.swift */; };
 		E5692E532B7079F0001E1885 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E522B7079F0001E1885 /* Item.swift */; };
 		E5692E552B7079F2001E1885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5692E542B7079F2001E1885 /* Assets.xcassets */; };
 		E5692E582B7079F2001E1885 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5692E572B7079F2001E1885 /* Preview Assets.xcassets */; };
+		E5692E5F2B707BC3001E1885 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E5E2B707BC3001E1885 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E5692E4B2B7079F0001E1885 /* NutriChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriChatApp.swift; sourceTree = "<group>"; };
-		E5692E502B7079F0001E1885 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E5692E522B7079F0001E1885 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E5692E542B7079F2001E1885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5692E572B7079F2001E1885 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E5692E5E2B707BC3001E1885 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +54,10 @@
 			isa = PBXGroup;
 			children = (
 				E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */,
-				E5692E502B7079F0001E1885 /* ContentView.swift */,
 				E5692E522B7079F0001E1885 /* Item.swift */,
 				E5692E542B7079F2001E1885 /* Assets.xcassets */,
 				E5692E562B7079F2001E1885 /* Preview Content */,
+				E5692E5E2B707BC3001E1885 /* MainView.swift */,
 			);
 			path = NutriChat;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5692E512B7079F0001E1885 /* ContentView.swift in Sources */,
+				E5692E5F2B707BC3001E1885 /* MainView.swift in Sources */,
 				E5692E532B7079F0001E1885 /* Item.swift in Sources */,
 				E5692E4F2B7079F0001E1885 /* NutriChatApp.swift in Sources */,
 			);
