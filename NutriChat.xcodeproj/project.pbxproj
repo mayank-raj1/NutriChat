@@ -86,7 +86,6 @@
 			children = (
 				E5692E5E2B707BC3001E1885 /* MainView.swift */,
 				E5692E692B70B6DF001E1885 /* ChatWindowView.swift */,
-				E5692E6D2B70C5C3001E1885 /* SendField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,6 +93,7 @@
 		E5692E612B70ABC3001E1885 /* Componets */ = {
 			isa = PBXGroup;
 			children = (
+				E5692E6D2B70C5C3001E1885 /* SendField.swift */,
 				E5692E622B70ABD1001E1885 /* MessageSentView.swift */,
 				E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */,
 			);
