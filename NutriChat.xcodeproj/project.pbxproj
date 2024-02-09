@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5239C7A2B76BEC000CD8EBB /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5239C782B76BEC000CD8EBB /* GenerativeAI-Info.plist */; };
+		E5239C7B2B76BEC000CD8EBB /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5239C792B76BEC000CD8EBB /* APIKey.swift */; };
+		E5239C7F2B76D55200CD8EBB /* ChatHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5239C7E2B76D55200CD8EBB /* ChatHandler.swift */; };
 		E5692E4F2B7079F0001E1885 /* NutriChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */; };
 		E5692E552B7079F2001E1885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5692E542B7079F2001E1885 /* Assets.xcassets */; };
 		E5692E582B7079F2001E1885 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5692E572B7079F2001E1885 /* Preview Assets.xcassets */; };
@@ -17,9 +20,13 @@
 		E5692E6A2B70B6DF001E1885 /* ChatWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E692B70B6DF001E1885 /* ChatWindowView.swift */; };
 		E5692E6C2B70B75C001E1885 /* MessageReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */; };
 		E5692E6E2B70C5C3001E1885 /* SendField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E6D2B70C5C3001E1885 /* SendField.swift */; };
+		E56B6B572B76B04B007846F4 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = E56B6B562B76B04B007846F4 /* GoogleGenerativeAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5239C782B76BEC000CD8EBB /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
+		E5239C792B76BEC000CD8EBB /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		E5239C7E2B76D55200CD8EBB /* ChatHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHandler.swift; sourceTree = "<group>"; };
 		E5692E4B2B7079F0001E1885 /* NutriChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriChatApp.swift; sourceTree = "<group>"; };
 		E5692E542B7079F2001E1885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,12 +45,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56B6B572B76B04B007846F4 /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5239C772B76BEC000CD8EBB /* APIKey */ = {
+			isa = PBXGroup;
+			children = (
+				E5239C782B76BEC000CD8EBB /* GenerativeAI-Info.plist */,
+				E5239C792B76BEC000CD8EBB /* APIKey.swift */,
+			);
+			name = APIKey;
+			path = ../../../../../../Downloads/APIKey;
+			sourceTree = "<group>";
+		};
+		E5239C7D2B76D53900CD8EBB /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E5239C7E2B76D55200CD8EBB /* ChatHandler.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		E5692E422B7079F0001E1885 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +89,8 @@
 		E5692E4D2B7079F0001E1885 /* NutriChat */ = {
 			isa = PBXGroup;
 			children = (
+				E5239C7D2B76D53900CD8EBB /* Utility */,
+				E5239C772B76BEC000CD8EBB /* APIKey */,
 				E5692E642B70AC27001E1885 /* Model */,
 				E5692E612B70ABC3001E1885 /* Componets */,
 				E5692E602B70ABB1001E1885 /* Views */,
@@ -125,6 +153,9 @@
 			dependencies = (
 			);
 			name = NutriChat;
+			packageProductDependencies = (
+				E56B6B562B76B04B007846F4 /* GoogleGenerativeAI */,
+			);
 			productName = NutriChat;
 			productReference = E5692E4B2B7079F0001E1885 /* NutriChat.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +184,9 @@
 				Base,
 			);
 			mainGroup = E5692E422B7079F0001E1885;
+			packageReferences = (
+				E56B6B552B76B04B007846F4 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+			);
 			productRefGroup = E5692E4C2B7079F0001E1885 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5239C7A2B76BEC000CD8EBB /* GenerativeAI-Info.plist in Resources */,
 				E5692E582B7079F2001E1885 /* Preview Assets.xcassets in Resources */,
 				E5692E552B7079F2001E1885 /* Assets.xcassets in Resources */,
 			);
@@ -182,10 +217,12 @@
 				E5692E6E2B70C5C3001E1885 /* SendField.swift in Sources */,
 				E5692E5F2B707BC3001E1885 /* MainView.swift in Sources */,
 				E5692E662B70AC3C001E1885 /* Message.swift in Sources */,
+				E5239C7F2B76D55200CD8EBB /* ChatHandler.swift in Sources */,
 				E5692E4F2B7079F0001E1885 /* NutriChatApp.swift in Sources */,
 				E5692E632B70ABD1001E1885 /* MessageSentView.swift in Sources */,
 				E5692E6C2B70B75C001E1885 /* MessageReceiveView.swift in Sources */,
 				E5692E6A2B70B6DF001E1885 /* ChatWindowView.swift in Sources */,
+				E5239C7B2B76BEC000CD8EBB /* APIKey.swift in Sources */,
 				E5692E682B70B599001E1885 /* ChatHistory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,9 +360,11 @@
 				DEVELOPMENT_TEAM = 6RX3N6LDB9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -352,9 +391,11 @@
 				DEVELOPMENT_TEAM = 6RX3N6LDB9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -392,6 +433,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E56B6B552B76B04B007846F4 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E56B6B562B76B04B007846F4 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E56B6B552B76B04B007846F4 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E5692E432B7079F0001E1885 /* Project object */;
 }

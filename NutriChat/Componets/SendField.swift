@@ -8,33 +8,9 @@
 import SwiftUI
 
 struct SendField: View {
-    @EnvironmentObject var chatHistory: ChatHistory
+    @EnvironmentObject var chatHandler: ChatHandler
     @State var textResponse = ""
     @State var isProcessing = false
-    
-    private var submit: Void {
-        chatHistory.addUserMessage(message: textResponse)
-        textResponse = ""
-        print("Stating")
-        Task.init {
-            await delay()
-        }
-        print("Ended")
-    }
-    
-    private func delay() async -> Void {
-        isProcessing = true
-        print("1")
-        do{
-            try await Task.sleep(for: .seconds(5))
-        }
-        catch{
-            //
-        }
-        isProcessing = false
-        print("2")
-        return
-    }
     
     var body: some View {
         HStack{
@@ -52,8 +28,24 @@ struct SendField: View {
 
         }
     }
+    
+    private var submit: Void {
+        pass
+        textResponse = ""
+    }
+    
+    private var pass:Void{
+        Task{
+            isProcessing = true
+            print("Started")
+            await chatHandler.handle(message: textResponse)
+            isProcessing = false
+            print("Ended")
+        }
+       
+    }
 }
 
 #Preview {
-    SendField().environmentObject(MocDate.chat)
+    SendField().environmentObject(ChatHandler(history: []))
 }

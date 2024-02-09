@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ChatWindowView: View {
-    @EnvironmentObject var chatHistory: ChatHistory
+    @EnvironmentObject var chatHandler: ChatHandler
     var body: some View {
         List {
-            ForEach(chatHistory.messages) { message in
+            ForEach(chatHandler.messeges) { message in
                 if message.isUser{
                     MessageSentView(message: message)
                 }else{
@@ -22,6 +22,3 @@ struct ChatWindowView: View {
     }
 }
 
-#Preview {
-    ChatWindowView().environmentObject(MocDate.chat)
-}

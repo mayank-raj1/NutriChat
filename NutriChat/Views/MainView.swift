@@ -12,11 +12,13 @@ struct MainView: View {
         VStack{
             ChatWindowView()
             Divider().frame(height: 12)
-            SendField().padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+            SendField().padding()
         }
     }
 }
 
+
+
 #Preview {
-    MainView().environmentObject(MocDate.chat)
+    MainView().environmentObject(ChatHandler(history: Mock.history))
 }

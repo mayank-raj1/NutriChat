@@ -19,4 +19,5 @@ struct MocDate{
     static var messageRecive = Message(message: "How are you?", isUser: false)
     
     static var chat = ChatHistory(messages: [message, messageRecive, message, messageRecive])
+    
 }

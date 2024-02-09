@@ -11,7 +11,7 @@ import SwiftUI
 struct NutriChatApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView().environmentObject(ChatHandler(history: []))
         }
     }
 }
