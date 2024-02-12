@@ -18,12 +18,13 @@ struct Message: Hashable, Identifiable{
     let id  = UUID()
     var message: String
     var participant: Participant
+    var isprocessing: Bool = false
 }
 
 struct MocDate{
     static var message = Message(message: "Hey", participant: .user)
-    static var messageRecive = Message(message: "How are you?", participant: .system)
+    static var messageRecive = Message(message: "How are you?", participant: .system, isprocessing: true)
     
-    static var chat = ChatHistory(messages: [message, messageRecive, message, messageRecive])
+    
     
 }

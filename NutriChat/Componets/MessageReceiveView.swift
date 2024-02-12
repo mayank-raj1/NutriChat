@@ -17,12 +17,16 @@ struct MessageReceiveView: View {
                 .frame(width: 30)
                 .foregroundStyle(.teal)
                 
-            Text(message.message)
-                .multilineTextAlignment(.leading)
-                .foregroundStyle(.primary)
-                .padding(12)
-                .background(Color(UIColor.systemGray5))
-                .clipShape(.rect(cornerRadius: 15))
+            if message.isprocessing{
+                BouncingDots().padding().background(Color(UIColor.systemGray5)).clipShape(.rect(cornerRadius: 15))
+            }else {
+                Text(message.message)
+                    .multilineTextAlignment(.leading)
+                    .foregroundStyle(.primary)
+                    .padding(12)
+                    .background(Color(UIColor.systemGray5))
+                    .clipShape(.rect(cornerRadius: 15))
+            }
             Spacer()
         }.padding(.trailing)
     }

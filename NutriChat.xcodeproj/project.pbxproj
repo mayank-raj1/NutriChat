@@ -16,11 +16,12 @@
 		E5692E5F2B707BC3001E1885 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E5E2B707BC3001E1885 /* MainView.swift */; };
 		E5692E632B70ABD1001E1885 /* MessageSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E622B70ABD1001E1885 /* MessageSentView.swift */; };
 		E5692E662B70AC3C001E1885 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E652B70AC3C001E1885 /* Message.swift */; };
-		E5692E682B70B599001E1885 /* ChatHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E672B70B599001E1885 /* ChatHistory.swift */; };
 		E5692E6A2B70B6DF001E1885 /* ChatWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E692B70B6DF001E1885 /* ChatWindowView.swift */; };
 		E5692E6C2B70B75C001E1885 /* MessageReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */; };
 		E5692E6E2B70C5C3001E1885 /* SendField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E6D2B70C5C3001E1885 /* SendField.swift */; };
 		E56B6B572B76B04B007846F4 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = E56B6B562B76B04B007846F4 /* GoogleGenerativeAI */; };
+		E58B8CA32B79C03300D9F4B8 /* BouncingDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */; };
+		E58B8CA52B7A01F300D9F4B8 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +35,11 @@
 		E5692E5E2B707BC3001E1885 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E5692E622B70ABD1001E1885 /* MessageSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSentView.swift; sourceTree = "<group>"; };
 		E5692E652B70AC3C001E1885 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		E5692E672B70B599001E1885 /* ChatHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistory.swift; sourceTree = "<group>"; };
 		E5692E692B70B6DF001E1885 /* ChatWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWindowView.swift; sourceTree = "<group>"; };
 		E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReceiveView.swift; sourceTree = "<group>"; };
 		E5692E6D2B70C5C3001E1885 /* SendField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendField.swift; sourceTree = "<group>"; };
+		E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncingDots.swift; sourceTree = "<group>"; };
+		E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				E5692E6D2B70C5C3001E1885 /* SendField.swift */,
 				E5692E622B70ABD1001E1885 /* MessageSentView.swift */,
 				E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */,
+				E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */,
 			);
 			path = Componets;
 			sourceTree = "<group>";
@@ -132,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				E5692E652B70AC3C001E1885 /* Message.swift */,
-				E5692E672B70B599001E1885 /* ChatHistory.swift */,
+				E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E58B8CA32B79C03300D9F4B8 /* BouncingDots.swift in Sources */,
 				E5692E6E2B70C5C3001E1885 /* SendField.swift in Sources */,
 				E5692E5F2B707BC3001E1885 /* MainView.swift in Sources */,
 				E5692E662B70AC3C001E1885 /* Message.swift in Sources */,
@@ -222,8 +226,8 @@
 				E5692E632B70ABD1001E1885 /* MessageSentView.swift in Sources */,
 				E5692E6C2B70B75C001E1885 /* MessageReceiveView.swift in Sources */,
 				E5692E6A2B70B6DF001E1885 /* ChatWindowView.swift in Sources */,
+				E58B8CA52B7A01F300D9F4B8 /* UserPreferences.swift in Sources */,
 				E5239C7B2B76BEC000CD8EBB /* APIKey.swift in Sources */,
-				E5692E682B70B599001E1885 /* ChatHistory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
