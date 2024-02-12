@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct DietaryView: View {
+    @Binding var userPreferences: UserPreferences
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form{
+            
+        }
+        
     }
 }
 
 #Preview {
-    DietaryView()
+    DietaryView(userPreferences: .constant(UserPreferencesMockData.generateMockPreferences()))
 }

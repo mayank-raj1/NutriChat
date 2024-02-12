@@ -22,6 +22,7 @@
 		E58B8CA52B7A01F300D9F4B8 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */; };
 		E58B8CAB2B7A0AAA00D9F4B8 /* DietaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CAA2B7A0AAA00D9F4B8 /* DietaryView.swift */; };
 		E58B8CAD2B7A0B3600D9F4B8 /* MocData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CAC2B7A0B3600D9F4B8 /* MocData.swift */; };
+		E58B8CAE2B7A10C900D9F4B8 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CA82B7A0A3800D9F4B8 /* APIKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +60,6 @@
 		E5239C7D2B76D53900CD8EBB /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				E58B8CA62B7A0A3800D9F4B8 /* APIKey */,
 				E58B8CAC2B7A0B3600D9F4B8 /* MocData.swift */,
 			);
 			path = Utility;
@@ -127,6 +127,7 @@
 		E5692E642B70AC27001E1885 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E58B8CA62B7A0A3800D9F4B8 /* APIKey */,
 				E5239C7E2B76D55200CD8EBB /* ChatHandler.swift */,
 				E5692E652B70AC3C001E1885 /* Message.swift */,
 				E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */,
@@ -137,8 +138,8 @@
 		E58B8CA62B7A0A3800D9F4B8 /* APIKey */ = {
 			isa = PBXGroup;
 			children = (
-				E58B8CA72B7A0A3800D9F4B8 /* GenerativeAI-Info.plist */,
 				E58B8CA82B7A0A3800D9F4B8 /* APIKey.swift */,
+				E58B8CA72B7A0A3800D9F4B8 /* GenerativeAI-Info.plist */,
 			);
 			path = APIKey;
 			sourceTree = "<group>";
@@ -238,6 +239,7 @@
 				E5692E6C2B70B75C001E1885 /* MessageReceiveView.swift in Sources */,
 				E58B8CAB2B7A0AAA00D9F4B8 /* DietaryView.swift in Sources */,
 				E5692E6A2B70B6DF001E1885 /* ChatWindowView.swift in Sources */,
+				E58B8CAE2B7A10C900D9F4B8 /* APIKey.swift in Sources */,
 				E58B8CA52B7A01F300D9F4B8 /* UserPreferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
