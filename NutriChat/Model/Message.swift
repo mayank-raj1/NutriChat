@@ -8,15 +8,21 @@
 import SwiftUI
 import Foundation
 
+enum Participant {
+  case system
+  case user
+}
+
+
 struct Message: Hashable, Identifiable{
     let id  = UUID()
     var message: String
-    var isUser: Bool
+    var participant: Participant
 }
 
 struct MocDate{
-    static var message = Message(message: "Hey", isUser: true)
-    static var messageRecive = Message(message: "How are you?", isUser: false)
+    static var message = Message(message: "Hey", participant: .user)
+    static var messageRecive = Message(message: "How are you?", participant: .system)
     
     static var chat = ChatHistory(messages: [message, messageRecive, message, messageRecive])
     

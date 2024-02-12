@@ -20,5 +20,5 @@ struct MainView: View {
 
 
 #Preview {
-    MainView().environmentObject(ChatHandler(history: Mock.history))
+    MainView().environmentObject(ChatHandler())
 }

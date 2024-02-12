@@ -30,22 +30,25 @@ struct SendField: View {
     }
     
     private var submit: Void {
-        pass
+        let messsage = textResponse
         textResponse = ""
+        Task {
+            await chatHandler.handle(message: messsage)
+        }
     }
     
-    private var pass:Void{
-        Task{
-            isProcessing = true
-            print("Started")
-            await chatHandler.handle(message: textResponse)
-            isProcessing = false
-            print("Ended")
-        }
-       
-    }
+//    private var pass:Void{
+//        Task{
+//            isProcessing = true
+//            print("Started")
+//            await chatHandler.handle(message: textResponse)
+//            isProcessing = false
+//            print("Ended")
+//        }
+//       
+//    }
 }
 
 #Preview {
-    SendField().environmentObject(ChatHandler(history: []))
+    SendField().environmentObject(ChatHandler())
 }

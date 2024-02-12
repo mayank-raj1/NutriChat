@@ -16,10 +16,10 @@ final class ChatHistory: Identifiable, ObservableObject{
     }
     
     func addUserMessage(message: String){
-        messages.append(Message(message: message, isUser: true))
+        messages.append(Message(message: message, participant: .user))
     }
     
     func addMessage(message: String){
-        messages.append(Message(message: message, isUser: false))
+        messages.append(Message(message: message, participant: .system))
     }
 }

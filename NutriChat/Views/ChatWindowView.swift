@@ -12,7 +12,7 @@ struct ChatWindowView: View {
     var body: some View {
         List {
             ForEach(chatHandler.messeges) { message in
-                if message.isUser{
+                if message.participant == .user{
                     MessageSentView(message: message)
                 }else{
                     MessageReceiveView(message: message)
