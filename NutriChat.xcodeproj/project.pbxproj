@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E5239C7A2B76BEC000CD8EBB /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5239C782B76BEC000CD8EBB /* GenerativeAI-Info.plist */; };
-		E5239C7B2B76BEC000CD8EBB /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5239C792B76BEC000CD8EBB /* APIKey.swift */; };
 		E5239C7F2B76D55200CD8EBB /* ChatHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5239C7E2B76D55200CD8EBB /* ChatHandler.swift */; };
 		E5692E4F2B7079F0001E1885 /* NutriChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */; };
 		E5692E552B7079F2001E1885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5692E542B7079F2001E1885 /* Assets.xcassets */; };
@@ -22,11 +20,11 @@
 		E56B6B572B76B04B007846F4 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = E56B6B562B76B04B007846F4 /* GoogleGenerativeAI */; };
 		E58B8CA32B79C03300D9F4B8 /* BouncingDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */; };
 		E58B8CA52B7A01F300D9F4B8 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */; };
+		E58B8CAB2B7A0AAA00D9F4B8 /* DietaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CAA2B7A0AAA00D9F4B8 /* DietaryView.swift */; };
+		E58B8CAD2B7A0B3600D9F4B8 /* MocData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CAC2B7A0B3600D9F4B8 /* MocData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E5239C782B76BEC000CD8EBB /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
-		E5239C792B76BEC000CD8EBB /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		E5239C7E2B76D55200CD8EBB /* ChatHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHandler.swift; sourceTree = "<group>"; };
 		E5692E4B2B7079F0001E1885 /* NutriChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriChatApp.swift; sourceTree = "<group>"; };
@@ -40,6 +38,10 @@
 		E5692E6D2B70C5C3001E1885 /* SendField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendField.swift; sourceTree = "<group>"; };
 		E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncingDots.swift; sourceTree = "<group>"; };
 		E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+		E58B8CA72B7A0A3800D9F4B8 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
+		E58B8CA82B7A0A3800D9F4B8 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		E58B8CAA2B7A0AAA00D9F4B8 /* DietaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DietaryView.swift; path = NutriChat/Model/DietaryView.swift; sourceTree = SOURCE_ROOT; };
+		E58B8CAC2B7A0B3600D9F4B8 /* MocData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,20 +56,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E5239C772B76BEC000CD8EBB /* APIKey */ = {
-			isa = PBXGroup;
-			children = (
-				E5239C782B76BEC000CD8EBB /* GenerativeAI-Info.plist */,
-				E5239C792B76BEC000CD8EBB /* APIKey.swift */,
-			);
-			name = APIKey;
-			path = ../../../../../../Downloads/APIKey;
-			sourceTree = "<group>";
-		};
 		E5239C7D2B76D53900CD8EBB /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				E5239C7E2B76D55200CD8EBB /* ChatHandler.swift */,
+				E58B8CA62B7A0A3800D9F4B8 /* APIKey */,
+				E58B8CAC2B7A0B3600D9F4B8 /* MocData.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -92,10 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				E5239C7D2B76D53900CD8EBB /* Utility */,
-				E5239C772B76BEC000CD8EBB /* APIKey */,
 				E5692E642B70AC27001E1885 /* Model */,
-				E5692E612B70ABC3001E1885 /* Componets */,
-				E5692E602B70ABB1001E1885 /* Views */,
+				E5692E612B70ABC3001E1885 /* Views */,
+				E5692E602B70ABB1001E1885 /* Screens */,
 				E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */,
 				E5692E542B7079F2001E1885 /* Assets.xcassets */,
 				E5692E562B7079F2001E1885 /* Preview Content */,
@@ -111,33 +103,52 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E5692E602B70ABB1001E1885 /* Views */ = {
+		E5692E602B70ABB1001E1885 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				E5692E5E2B707BC3001E1885 /* MainView.swift */,
 				E5692E692B70B6DF001E1885 /* ChatWindowView.swift */,
 			);
-			path = Views;
+			path = Screens;
 			sourceTree = "<group>";
 		};
-		E5692E612B70ABC3001E1885 /* Componets */ = {
+		E5692E612B70ABC3001E1885 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E58B8CA92B7A0A8C00D9F4B8 /* Preferences */,
 				E5692E6D2B70C5C3001E1885 /* SendField.swift */,
 				E5692E622B70ABD1001E1885 /* MessageSentView.swift */,
 				E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */,
 				E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */,
 			);
-			path = Componets;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E5692E642B70AC27001E1885 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E5239C7E2B76D55200CD8EBB /* ChatHandler.swift */,
 				E5692E652B70AC3C001E1885 /* Message.swift */,
 				E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E58B8CA62B7A0A3800D9F4B8 /* APIKey */ = {
+			isa = PBXGroup;
+			children = (
+				E58B8CA72B7A0A3800D9F4B8 /* GenerativeAI-Info.plist */,
+				E58B8CA82B7A0A3800D9F4B8 /* APIKey.swift */,
+			);
+			path = APIKey;
+			sourceTree = "<group>";
+		};
+		E58B8CA92B7A0A8C00D9F4B8 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				E58B8CAA2B7A0AAA00D9F4B8 /* DietaryView.swift */,
+			);
+			path = Preferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +215,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5239C7A2B76BEC000CD8EBB /* GenerativeAI-Info.plist in Resources */,
 				E5692E582B7079F2001E1885 /* Preview Assets.xcassets in Resources */,
 				E5692E552B7079F2001E1885 /* Assets.xcassets in Resources */,
 			);
@@ -222,12 +232,13 @@
 				E5692E5F2B707BC3001E1885 /* MainView.swift in Sources */,
 				E5692E662B70AC3C001E1885 /* Message.swift in Sources */,
 				E5239C7F2B76D55200CD8EBB /* ChatHandler.swift in Sources */,
+				E58B8CAD2B7A0B3600D9F4B8 /* MocData.swift in Sources */,
 				E5692E4F2B7079F0001E1885 /* NutriChatApp.swift in Sources */,
 				E5692E632B70ABD1001E1885 /* MessageSentView.swift in Sources */,
 				E5692E6C2B70B75C001E1885 /* MessageReceiveView.swift in Sources */,
+				E58B8CAB2B7A0AAA00D9F4B8 /* DietaryView.swift in Sources */,
 				E5692E6A2B70B6DF001E1885 /* ChatWindowView.swift in Sources */,
 				E58B8CA52B7A01F300D9F4B8 /* UserPreferences.swift in Sources */,
-				E5239C7B2B76BEC000CD8EBB /* APIKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
