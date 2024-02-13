@@ -27,6 +27,9 @@
 		E5B251102B7AE47200F098CB /* HealthWellnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2510F2B7AE47200F098CB /* HealthWellnessView.swift */; };
 		E5B251122B7BA95900F098CB /* PrefrenceStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B251112B7BA95900F098CB /* PrefrenceStartView.swift */; };
 		E5B251142B7BAC3E00F098CB /* CookingHabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B251132B7BAC3E00F098CB /* CookingHabitsView.swift */; };
+		E5B251162B7BADF700F098CB /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5B251152B7BADF700F098CB /* GenerativeAI-Info.plist */; };
+		E5B251182B7BAE5900F098CB /* GenerativeAI-Info_Sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5B251172B7BAE5900F098CB /* GenerativeAI-Info_Sample.plist */; };
+		E5B2511A2B7BAEA400F098CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E5B251192B7BAEA400F098CB /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +46,6 @@
 		E5692E6D2B70C5C3001E1885 /* SendField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendField.swift; sourceTree = "<group>"; };
 		E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncingDots.swift; sourceTree = "<group>"; };
 		E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
-		E58B8CA72B7A0A3800D9F4B8 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
 		E58B8CA82B7A0A3800D9F4B8 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		E58B8CAA2B7A0AAA00D9F4B8 /* DietaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DietaryView.swift; path = NutriChat/Model/DietaryView.swift; sourceTree = SOURCE_ROOT; };
 		E58B8CAC2B7A0B3600D9F4B8 /* MocData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocData.swift; sourceTree = "<group>"; };
@@ -51,6 +53,9 @@
 		E5B2510F2B7AE47200F098CB /* HealthWellnessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthWellnessView.swift; sourceTree = "<group>"; };
 		E5B251112B7BA95900F098CB /* PrefrenceStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefrenceStartView.swift; sourceTree = "<group>"; };
 		E5B251132B7BAC3E00F098CB /* CookingHabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingHabitsView.swift; sourceTree = "<group>"; };
+		E5B251152B7BADF700F098CB /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
+		E5B251172B7BAE5900F098CB /* GenerativeAI-Info_Sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info_Sample.plist"; sourceTree = "<group>"; };
+		E5B251192B7BAEA400F098CB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +81,7 @@
 		E5692E422B7079F0001E1885 = {
 			isa = PBXGroup;
 			children = (
+				E5B251192B7BAEA400F098CB /* .gitignore */,
 				E5692E4D2B7079F0001E1885 /* NutriChat */,
 				E5692E4C2B7079F0001E1885 /* Products */,
 			);
@@ -148,7 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				E58B8CA82B7A0A3800D9F4B8 /* APIKey.swift */,
-				E58B8CA72B7A0A3800D9F4B8 /* GenerativeAI-Info.plist */,
+				E5B251152B7BADF700F098CB /* GenerativeAI-Info.plist */,
+				E5B251172B7BAE5900F098CB /* GenerativeAI-Info_Sample.plist */,
 			);
 			path = APIKey;
 			sourceTree = "<group>";
@@ -228,8 +235,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B2511A2B7BAEA400F098CB /* .gitignore in Resources */,
 				E5692E582B7079F2001E1885 /* Preview Assets.xcassets in Resources */,
 				E5692E552B7079F2001E1885 /* Assets.xcassets in Resources */,
+				E5B251182B7BAE5900F098CB /* GenerativeAI-Info_Sample.plist in Resources */,
+				E5B251162B7BADF700F098CB /* GenerativeAI-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
