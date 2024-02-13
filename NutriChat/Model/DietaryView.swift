@@ -11,7 +11,9 @@ struct DietaryView: View {
     @Binding var userPreferences: UserPreferences
     var body: some View {
         Form{
-            
+            Section("Hey") {
+                Text("nufiv")
+            }
         }
         
     }
