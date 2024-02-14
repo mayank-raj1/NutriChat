@@ -37,7 +37,12 @@ struct UserPreferences {
     //Dietary Restrictions & Preferences
     
 }
-enum DietaryChoice: String, CaseIterable {
+
+protocol Prefrence: CaseIterable{
+    
+}
+
+enum DietaryChoice: String, Prefrence {
     case omnivore = "Omnivore"
     case vegetarian = "Vegetarian"
     case vegan = "Vegan"
@@ -49,7 +54,7 @@ enum DietaryChoice: String, CaseIterable {
     case eggFree = "Egg-free"
 }
 
-enum Allergy: String, CaseIterable {
+enum Allergy: String, Prefrence {
     case shellfish = "Shellfish"
     case peanuts = "Peanuts"
     case treeNuts = "Tree nuts"
@@ -59,7 +64,7 @@ enum Allergy: String, CaseIterable {
     case wheat = "Wheat"
 }
 
-enum Intolerance: String, CaseIterable {
+enum Intolerance: String, Prefrence {
     case lactose = "Lactose"
     case gluten = "Gluten"
     case fructose = "Fructose"
@@ -67,7 +72,7 @@ enum Intolerance: String, CaseIterable {
     case sulfites = "Sulfites"
 }
 
-enum SpecificRestriction: String, CaseIterable {
+enum SpecificRestriction: String, Prefrence {
     case keto = "Keto"
     case paleo = "Paleo"
     case lowCarb = "Low-carb"
@@ -76,13 +81,13 @@ enum SpecificRestriction: String, CaseIterable {
 }
 
 // Health & Wellness Goals
-enum WeightManagementGoal: String, CaseIterable {
+enum WeightManagementGoal: String, Prefrence {
     case gain = "Gain weight"
     case lose = "Lose weight"
     case maintain = "Maintain weight"
 }
 
-enum HealthCondition: String, CaseIterable {
+enum HealthCondition: String, Prefrence {
     case diabetes = "Diabetes"
     case heartDisease = "Heart disease"
     case allergies = "Allergies"
@@ -92,7 +97,7 @@ enum HealthCondition: String, CaseIterable {
     case other = "Other" // Add a text field for specifying other conditions (consult healthcare professionals for guidance)
 }
 
-enum NutrientPreference: String, CaseIterable {
+enum NutrientPreference: String, Prefrence {
     case highProtein = "High protein"
     case lowSodium = "Low sodium"
     case lowFat = "Low fat"
@@ -103,7 +108,7 @@ enum NutrientPreference: String, CaseIterable {
     case other = "Other" // Add a text field for specifying other preferences
 }
 
-enum FitnessGoal: String, CaseIterable {
+enum FitnessGoal: String, Prefrence {
     case muscleBuilding = "Muscle building"
     case weightLoss = "Weight loss"
     case athleticPerformance = "Athletic performance"
@@ -114,13 +119,13 @@ enum FitnessGoal: String, CaseIterable {
 }
 
 //Cooking Habits & Skills
-enum CookingExperienceLevel: String, CaseIterable {
+enum CookingExperienceLevel: String, Prefrence {
     case beginner = "Beginner"
     case intermediate = "Intermediate"
     case advanced = "Advanced"
 }
 
-enum PreferredCookingMethod: String, CaseIterable {
+enum PreferredCookingMethod: String, Prefrence {
     case baking = "Baking"
     case grilling = "Grilling"
     case sauteing = "Sauteing"
@@ -135,14 +140,14 @@ enum PreferredCookingMethod: String, CaseIterable {
     case other = "Other" // Add a text field for specifying other methods
 }
 
-enum TimeConstraint: String, CaseIterable {
+enum TimeConstraint: String, Prefrence {
     case quick = "Quick meals (30 minutes or less)"
     case moderate = "Moderate time commitment (30-60 minutes)"
     case elaborate = "Elaborate dishes (over 60 minutes)"
 }
 
 //
-enum CuisinePreference: String, CaseIterable {
+enum CuisinePreference: String, Prefrence {
     case italian = "Italian"
     case indian = "Indian"
     case mexican = "Mexican"
@@ -159,7 +164,7 @@ enum CuisinePreference: String, CaseIterable {
     case other = "Other" // Add a text field for specifying other cuisines
 }
 
-enum FlavourProfile: String, CaseIterable {
+enum FlavourProfile: String, Prefrence {
     case spicy = "Spicy"
     case sweet = "Sweet"
     case savory = "Savory"
@@ -172,12 +177,12 @@ enum FlavourProfile: String, CaseIterable {
     case other = "Other" // Add a text field for specifying other preferences
 }
 
-enum CulturalOpenness: String, CaseIterable {
+enum CulturalOpenness: String, Prefrence {
     case exploreNew = "Open to exploring new cuisines"
     case familiar = "Prefer familiar cuisines"
     case balanced = "Open to both new and familiar cuisines"
 }
-enum MealOccasion: String, CaseIterable {
+enum MealOccasion: String, Prefrence {
     case weeknight = "Weeknight meals"
     case weekend = "Weekend meals"
     case festive = "Festive dishes"
