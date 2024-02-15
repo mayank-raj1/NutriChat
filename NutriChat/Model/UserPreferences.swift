@@ -38,8 +38,22 @@ struct UserPreferences {
     
 }
 
-protocol Prefrence: CaseIterable{
+//protocol Prefrence: CaseIterable{
+////    func allCasesArays: Array<Self> {
+////        return Array(self.allCases)
+////    }
+//    
+//    func getAllCasesString() -> [String]
+//}
+protocol Prefrence: RawRepresentable, CaseIterable where RawValue == String {
     
+}
+
+extension Prefrence{
+    static func getAllStringCases() -> [String] {
+        return Self.allCases.map { $0.rawValue }
+    }
+
 }
 
 enum DietaryChoice: String, Prefrence {
@@ -52,6 +66,7 @@ enum DietaryChoice: String, Prefrence {
     case nutFree = "Nut-free"
     case soyFree = "Soy-free"
     case eggFree = "Egg-free"
+    case none = "None"
 }
 
 enum Allergy: String, Prefrence {
@@ -62,6 +77,7 @@ enum Allergy: String, Prefrence {
     case dairy = "Dairy"
     case egg = "Egg"
     case wheat = "Wheat"
+    case none = "None"
 }
 
 enum Intolerance: String, Prefrence {
@@ -70,6 +86,7 @@ enum Intolerance: String, Prefrence {
     case fructose = "Fructose"
     case histamine = "Histamine"
     case sulfites = "Sulfites"
+    case none = "None"
 }
 
 enum SpecificRestriction: String, Prefrence {
@@ -78,6 +95,7 @@ enum SpecificRestriction: String, Prefrence {
     case lowCarb = "Low-carb"
     case lowSodium = "Low-sodium"
     case highProtein = "High-protein"
+    case none = "None"
 }
 
 // Health & Wellness Goals
@@ -85,6 +103,7 @@ enum WeightManagementGoal: String, Prefrence {
     case gain = "Gain weight"
     case lose = "Lose weight"
     case maintain = "Maintain weight"
+    case none = "None"
 }
 
 enum HealthCondition: String, Prefrence {
@@ -95,6 +114,7 @@ enum HealthCondition: String, Prefrence {
     case highBloodPressure = "High blood pressure"
     case cholesterol = "High cholesterol"
     case other = "Other" // Add a text field for specifying other conditions (consult healthcare professionals for guidance)
+    case none = "None"
 }
 
 enum NutrientPreference: String, Prefrence {
@@ -106,6 +126,7 @@ enum NutrientPreference: String, Prefrence {
     case highIron = "High iron"
     case lowCarb = "Low carb"
     case other = "Other" // Add a text field for specifying other preferences
+    case none = "None"
 }
 
 enum FitnessGoal: String, Prefrence {
@@ -116,6 +137,7 @@ enum FitnessGoal: String, Prefrence {
     case flexibility = "Improved flexibility"
     case endurance = "Increased endurance"
     case other = "Other" // Add a text field for specifying other goals
+    case none = "None"
 }
 
 //Cooking Habits & Skills
@@ -123,6 +145,7 @@ enum CookingExperienceLevel: String, Prefrence {
     case beginner = "Beginner"
     case intermediate = "Intermediate"
     case advanced = "Advanced"
+    case none = "None"
 }
 
 enum PreferredCookingMethod: String, Prefrence {
@@ -138,12 +161,14 @@ enum PreferredCookingMethod: String, Prefrence {
     case slowCooking = "Slow cooking"
     case onePot = "One-pot meals"
     case other = "Other" // Add a text field for specifying other methods
+    case none = "None"
 }
 
 enum TimeConstraint: String, Prefrence {
     case quick = "Quick meals (30 minutes or less)"
     case moderate = "Moderate time commitment (30-60 minutes)"
     case elaborate = "Elaborate dishes (over 60 minutes)"
+    case none = "None"
 }
 
 //
@@ -162,6 +187,7 @@ enum CuisinePreference: String, Prefrence {
     case vegan = "Vegan"
     case glutenFree = "Gluten-free"
     case other = "Other" // Add a text field for specifying other cuisines
+    case none = "None"
 }
 
 enum FlavourProfile: String, Prefrence {
@@ -175,15 +201,18 @@ enum FlavourProfile: String, Prefrence {
     case bitter = "Bitter"
     case sour = "Sour"
     case other = "Other" // Add a text field for specifying other preferences
+    case none = "None"
 }
 
 enum CulturalOpenness: String, Prefrence {
     case exploreNew = "Open to exploring new cuisines"
     case familiar = "Prefer familiar cuisines"
     case balanced = "Open to both new and familiar cuisines"
+    case none = "None"
 }
 enum MealOccasion: String, Prefrence {
     case weeknight = "Weeknight meals"
     case weekend = "Weekend meals"
     case festive = "Festive dishes"
+    case none = "None"
 }

@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct PrefrenceSlectionView<commonEnum: Prefrence>: View {
-    let prefrence: commonEnum.Type
+    @Binding var prefrence: commonEnum?
+    var enumType: commonEnum.Type
     var body: some View {
         HStack{
-            prefrence.allCases.forEach { pref in
-                Text("\(pref)")
+            List(DietaryChoice.allCases, id: \.self) { pre in
+                Text(pre.rawValue)
             }
         }
     }
 }
 
 #Preview {
-    PrefrenceSlectionView(prefrence: DietaryChoice.self)
+    PrefrenceSlectionView(prefrence: .constant(DietaryChoice.dairyFree), enumType: DietaryChoice.self)
 }
