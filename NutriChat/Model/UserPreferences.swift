@@ -45,18 +45,17 @@ struct UserPreferences {
 //    
 //    func getAllCasesString() -> [String]
 //}
-protocol Prefrence: RawRepresentable, CaseIterable where RawValue == String {
+protocol Preference: RawRepresentable, CaseIterable, Hashable where RawValue == String {
     
 }
 
-extension Prefrence{
-    static func getAllStringCases() -> [String] {
-        return Self.allCases.map { $0.rawValue }
+extension Preference{
+    static func getAllCasses() -> [Self]{
+        return Array(Self.allCases)
+    }
     }
 
-}
-
-enum DietaryChoice: String, Prefrence {
+enum DietaryChoice: String, Preference {
     case omnivore = "Omnivore"
     case vegetarian = "Vegetarian"
     case vegan = "Vegan"
@@ -69,7 +68,7 @@ enum DietaryChoice: String, Prefrence {
     case none = "None"
 }
 
-enum Allergy: String, Prefrence {
+enum Allergy: String, Preference {
     case shellfish = "Shellfish"
     case peanuts = "Peanuts"
     case treeNuts = "Tree nuts"
@@ -80,7 +79,7 @@ enum Allergy: String, Prefrence {
     case none = "None"
 }
 
-enum Intolerance: String, Prefrence {
+enum Intolerance: String, Preference {
     case lactose = "Lactose"
     case gluten = "Gluten"
     case fructose = "Fructose"
@@ -89,7 +88,7 @@ enum Intolerance: String, Prefrence {
     case none = "None"
 }
 
-enum SpecificRestriction: String, Prefrence {
+enum SpecificRestriction: String, Preference {
     case keto = "Keto"
     case paleo = "Paleo"
     case lowCarb = "Low-carb"
@@ -99,14 +98,14 @@ enum SpecificRestriction: String, Prefrence {
 }
 
 // Health & Wellness Goals
-enum WeightManagementGoal: String, Prefrence {
+enum WeightManagementGoal: String, Preference {
     case gain = "Gain weight"
     case lose = "Lose weight"
     case maintain = "Maintain weight"
     case none = "None"
 }
 
-enum HealthCondition: String, Prefrence {
+enum HealthCondition: String, Preference {
     case diabetes = "Diabetes"
     case heartDisease = "Heart disease"
     case allergies = "Allergies"
@@ -117,7 +116,7 @@ enum HealthCondition: String, Prefrence {
     case none = "None"
 }
 
-enum NutrientPreference: String, Prefrence {
+enum NutrientPreference: String, Preference {
     case highProtein = "High protein"
     case lowSodium = "Low sodium"
     case lowFat = "Low fat"
@@ -129,7 +128,7 @@ enum NutrientPreference: String, Prefrence {
     case none = "None"
 }
 
-enum FitnessGoal: String, Prefrence {
+enum FitnessGoal: String, Preference {
     case muscleBuilding = "Muscle building"
     case weightLoss = "Weight loss"
     case athleticPerformance = "Athletic performance"
@@ -141,14 +140,14 @@ enum FitnessGoal: String, Prefrence {
 }
 
 //Cooking Habits & Skills
-enum CookingExperienceLevel: String, Prefrence {
+enum CookingExperienceLevel: String, Preference {
     case beginner = "Beginner"
     case intermediate = "Intermediate"
     case advanced = "Advanced"
     case none = "None"
 }
 
-enum PreferredCookingMethod: String, Prefrence {
+enum PreferredCookingMethod: String, Preference {
     case baking = "Baking"
     case grilling = "Grilling"
     case sauteing = "Sauteing"
@@ -164,7 +163,7 @@ enum PreferredCookingMethod: String, Prefrence {
     case none = "None"
 }
 
-enum TimeConstraint: String, Prefrence {
+enum TimeConstraint: String, Preference {
     case quick = "Quick meals (30 minutes or less)"
     case moderate = "Moderate time commitment (30-60 minutes)"
     case elaborate = "Elaborate dishes (over 60 minutes)"
@@ -172,7 +171,7 @@ enum TimeConstraint: String, Prefrence {
 }
 
 //
-enum CuisinePreference: String, Prefrence {
+enum CuisinePreference: String, Preference {
     case italian = "Italian"
     case indian = "Indian"
     case mexican = "Mexican"
@@ -190,7 +189,7 @@ enum CuisinePreference: String, Prefrence {
     case none = "None"
 }
 
-enum FlavourProfile: String, Prefrence {
+enum FlavourProfile: String, Preference {
     case spicy = "Spicy"
     case sweet = "Sweet"
     case savory = "Savory"
@@ -204,13 +203,13 @@ enum FlavourProfile: String, Prefrence {
     case none = "None"
 }
 
-enum CulturalOpenness: String, Prefrence {
+enum CulturalOpenness: String, Preference {
     case exploreNew = "Open to exploring new cuisines"
     case familiar = "Prefer familiar cuisines"
     case balanced = "Open to both new and familiar cuisines"
     case none = "None"
 }
-enum MealOccasion: String, Prefrence {
+enum MealOccasion: String, Preference {
     case weeknight = "Weeknight meals"
     case weekend = "Weekend meals"
     case festive = "Festive dishes"
