@@ -66,6 +66,7 @@ enum DietaryChoice: String, Preference {
     case soyFree = "Soy-free"
     case eggFree = "Egg-free"
     case none = "None"
+    case placeHolder = ""
 }
 
 enum Allergy: String, Preference {
@@ -77,6 +78,7 @@ enum Allergy: String, Preference {
     case egg = "Egg"
     case wheat = "Wheat"
     case none = "None"
+    case placeHolder = ""
 }
 
 enum Intolerance: String, Preference {
@@ -86,6 +88,7 @@ enum Intolerance: String, Preference {
     case histamine = "Histamine"
     case sulfites = "Sulfites"
     case none = "None"
+    case placeHolder = ""
 }
 
 enum SpecificRestriction: String, Preference {
@@ -95,6 +98,7 @@ enum SpecificRestriction: String, Preference {
     case lowSodium = "Low-sodium"
     case highProtein = "High-protein"
     case none = "None"
+    case placeHolder = ""
 }
 
 // Health & Wellness Goals
@@ -102,7 +106,7 @@ enum WeightManagementGoal: String, Preference {
     case gain = "Gain weight"
     case lose = "Lose weight"
     case maintain = "Maintain weight"
-    case none = "None"
+    case placeHolder = ""
 }
 
 enum HealthCondition: String, Preference {
@@ -114,6 +118,7 @@ enum HealthCondition: String, Preference {
     case cholesterol = "High cholesterol"
     case other = "Other" // Add a text field for specifying other conditions (consult healthcare professionals for guidance)
     case none = "None"
+    case placeHolder = ""
 }
 
 enum NutrientPreference: String, Preference {
@@ -126,6 +131,7 @@ enum NutrientPreference: String, Preference {
     case lowCarb = "Low carb"
     case other = "Other" // Add a text field for specifying other preferences
     case none = "None"
+    case placeHolder = ""
 }
 
 enum FitnessGoal: String, Preference {
@@ -137,6 +143,7 @@ enum FitnessGoal: String, Preference {
     case endurance = "Increased endurance"
     case other = "Other" // Add a text field for specifying other goals
     case none = "None"
+    case placeHolder = ""
 }
 
 //Cooking Habits & Skills
@@ -144,7 +151,7 @@ enum CookingExperienceLevel: String, Preference {
     case beginner = "Beginner"
     case intermediate = "Intermediate"
     case advanced = "Advanced"
-    case none = "None"
+    case placeHolder = ""
 }
 
 enum PreferredCookingMethod: String, Preference {
@@ -160,14 +167,14 @@ enum PreferredCookingMethod: String, Preference {
     case slowCooking = "Slow cooking"
     case onePot = "One-pot meals"
     case other = "Other" // Add a text field for specifying other methods
-    case none = "None"
+    case placeHolder = ""
 }
 
 enum TimeConstraint: String, Preference {
     case quick = "Quick meals (30 minutes or less)"
     case moderate = "Moderate time commitment (30-60 minutes)"
     case elaborate = "Elaborate dishes (over 60 minutes)"
-    case none = "None"
+    case placeHolder = ""
 }
 
 //
@@ -186,7 +193,7 @@ enum CuisinePreference: String, Preference {
     case vegan = "Vegan"
     case glutenFree = "Gluten-free"
     case other = "Other" // Add a text field for specifying other cuisines
-    case none = "None"
+    case placeHolder = ""
 }
 
 enum FlavourProfile: String, Preference {
@@ -200,18 +207,18 @@ enum FlavourProfile: String, Preference {
     case bitter = "Bitter"
     case sour = "Sour"
     case other = "Other" // Add a text field for specifying other preferences
-    case none = "None"
+    case placeHolder = ""
 }
 
 enum CulturalOpenness: String, Preference {
     case exploreNew = "Open to exploring new cuisines"
     case familiar = "Prefer familiar cuisines"
     case balanced = "Open to both new and familiar cuisines"
-    case none = "None"
+    case placeHolder = ""
 }
 enum MealOccasion: String, Preference {
     case weeknight = "Weeknight meals"
     case weekend = "Weekend meals"
     case festive = "Festive dishes"
-    case none = "None"
+    case placeHolder = ""
 }

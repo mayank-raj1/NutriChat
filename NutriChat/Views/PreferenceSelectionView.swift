@@ -8,33 +8,81 @@
 import SwiftUI
 
 struct PreferenceSingleSelectionView<commonEnum: Preference>: View {
-    @Binding var preference: commonEnum?
+    @Binding var preference: commonEnum
+    
     var body: some View {
         VStack{
-            List(commonEnum.getAllCasses(), id: \.self, selection: $preference) { pre in
-                Text(pre.rawValue)
+            List{
+                ForEach(commonEnum.getAllCasses(), id: \.self) { caseValue in
+                    if caseValue.rawValue != ""{
+                        HStack{
+                            Text(caseValue.rawValue)
+                            Spacer()
+                            if caseValue == preference{
+                                Image(systemName: "checkmark")
+                            }
+                        }.onTapGesture{
+                            print("nmk")
+                            self.preference = caseValue
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+struct PreferenceMultipleSelectionView<commonEnum: Preference>: View {
+    @Binding var preference: [commonEnum]
+    
+    var body: some View {
+        VStack{
+            List{
+                ForEach(commonEnum.getAllCasses(), id: \.self) { caseValue in
+                    if caseValue.rawValue != ""{
+                        HStack{
+                            Text(caseValue.rawValue)
+                            Spacer()
+                            if contains(caseValue){
+                                Image(systemName: "checkmark")
+                            }
+                        }.onTapGesture{
+                            if caseValue.rawValue == "None"{
+                                handleNone(caseValue)
+                            }else{
+                                addValue(caseValue)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    private func contains(_ value: commonEnum) -> Bool{
+        return preference.contains(value)
+    }
+    
+    private func handleNone(_ noneValue: commonEnum) -> Void{
+        preference.removeAll()
+        preference.append(noneValue)
+    }
+    
+    private func addValue(_ value: commonEnum) -> Void{
+        preference.removeAll { item in
+            item.rawValue == "None"
+        }
+        if !contains(value){
+            preference.append(value)
+        }else{
+            preference.removeAll { item in
+                item == value
             }
         }
     }
 }
 
 //#Preview {
-//    PreferenceSingleSelectionView(preference: .constant(DietaryChoice.none))
+//    PreferenceSingleSelectionView(preference: DietaryChoice.placeHolder)
+//    PreferenceMultipleSelectionView(preference: [DietaryChoice.placeHolder])
 //}
-
-struct PreferenceMultipleSelectionView<commonEnum: Preference>: View {
-    //@Binding var preferences: [commonEnum]?
-    @Binding var preferences: Set<commonEnum>
-    var body: some View {
-        VStack{
-            List(commonEnum.getAllCasses(), id: \.self, selection: $preferences) { pref in
-                Text(pref.rawValue)
-            }
-            
-        }
-    }
-}
-
-#Preview {
-    PreferenceMultipleSelectionView(preferences:  .constant([DietaryChoice.dairyFree, DietaryChoice.glutenFree]))
-}
