@@ -111,7 +111,6 @@ enum HealthCondition: String, Preference {
     case celiacDisease = "Celiac disease"
     case highBloodPressure = "High blood pressure"
     case cholesterol = "High cholesterol"
-    case other = "Other" // Add a text field for specifying other conditions (consult healthcare professionals for guidance)
     case none = "None"
     case placeHolder = ""
 }
@@ -124,7 +123,6 @@ enum NutrientPreference: String, Preference {
     case lowSugar = "Low sugar"
     case highIron = "High iron"
     case lowCarb = "Low carb"
-    case other = "Other" // Add a text field for specifying other preferences
     case none = "None"
     case placeHolder = ""
 }
@@ -136,7 +134,6 @@ enum FitnessGoal: String, Preference {
     case generalFitness = "General fitness"
     case flexibility = "Improved flexibility"
     case endurance = "Increased endurance"
-    case other = "Other" // Add a text field for specifying other goals
     case none = "None"
     case placeHolder = ""
 }
@@ -161,7 +158,6 @@ enum PreferredCookingMethod: String, Preference {
     case steaming = "Steaming"
     case slowCooking = "Slow cooking"
     case onePot = "One-pot meals"
-    case other = "Other" // Add a text field for specifying other methods
     case placeHolder = ""
 }
 
@@ -187,7 +183,6 @@ enum CuisinePreference: String, Preference {
     case vegetarian = "Vegetarian"
     case vegan = "Vegan"
     case glutenFree = "Gluten-free"
-    case other = "Other" // Add a text field for specifying other cuisines
     case placeHolder = ""
 }
 
@@ -201,7 +196,6 @@ enum FlavourProfile: String, Preference {
     case umami = "Umami"
     case bitter = "Bitter"
     case sour = "Sour"
-    case other = "Other" // Add a text field for specifying other preferences
     case placeHolder = ""
 }
 

@@ -19,6 +19,7 @@
 		E5692E6E2B70C5C3001E1885 /* SendField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E6D2B70C5C3001E1885 /* SendField.swift */; };
 		E56B6B572B76B04B007846F4 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = E56B6B562B76B04B007846F4 /* GoogleGenerativeAI */; };
 		E572F8ED2B7CFC8C00D297C3 /* PreferenceSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E572F8EC2B7CFC8C00D297C3 /* PreferenceSelectionView.swift */; };
+		E57DD54C2B7EEC9F0053C23E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57DD54B2B7EEC9F0053C23E /* User.swift */; };
 		E58B8CA32B79C03300D9F4B8 /* BouncingDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */; };
 		E58B8CA52B7A01F300D9F4B8 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */; };
 		E58B8CAB2B7A0AAA00D9F4B8 /* DietaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CAA2B7A0AAA00D9F4B8 /* DietaryView.swift */; };
@@ -46,6 +47,7 @@
 		E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReceiveView.swift; sourceTree = "<group>"; };
 		E5692E6D2B70C5C3001E1885 /* SendField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendField.swift; sourceTree = "<group>"; };
 		E572F8EC2B7CFC8C00D297C3 /* PreferenceSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceSelectionView.swift; sourceTree = "<group>"; };
+		E57DD54B2B7EEC9F0053C23E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncingDots.swift; sourceTree = "<group>"; };
 		E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		E58B8CA82B7A0A3800D9F4B8 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				E5239C7E2B76D55200CD8EBB /* ChatHandler.swift */,
 				E5692E652B70AC3C001E1885 /* Message.swift */,
 				E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */,
+				E57DD54B2B7EEC9F0053C23E /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				E58B8CAE2B7A10C900D9F4B8 /* APIKey.swift in Sources */,
 				E5B251142B7BAC3E00F098CB /* CookingHabitsView.swift in Sources */,
 				E58B8CA52B7A01F300D9F4B8 /* UserPreferences.swift in Sources */,
+				E57DD54C2B7EEC9F0053C23E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
