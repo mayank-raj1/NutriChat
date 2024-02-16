@@ -49,11 +49,6 @@ protocol Preference: RawRepresentable, CaseIterable, Hashable where RawValue == 
     
 }
 
-extension Preference{
-    static func getAllCasses() -> [Self]{
-        return Array(Self.allCases)
-    }
-    }
 
 enum DietaryChoice: String, Preference {
     case omnivore = "Omnivore"

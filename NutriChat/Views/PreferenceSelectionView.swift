@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct PreferenceSingleSelectionView<commonEnum: Preference>: View {
-    @Binding var preference: commonEnum
+struct PreferenceSingleSelectionView<CommonEnum: Preference>: View {
+    @Binding var preference: CommonEnum
     
     var body: some View {
         VStack{
             List{
-                ForEach(commonEnum.getAllCasses(), id: \.self) { caseValue in
+                ForEach(Array(CommonEnum.allCases), id: \.self) { caseValue in
                     if caseValue.rawValue != ""{
                         HStack{
                             Text(caseValue.rawValue)
@@ -22,7 +22,6 @@ struct PreferenceSingleSelectionView<commonEnum: Preference>: View {
                                 Image(systemName: "checkmark")
                             }
                         }.onTapGesture{
-                            print("nmk")
                             self.preference = caseValue
                         }
                     }
@@ -32,26 +31,20 @@ struct PreferenceSingleSelectionView<commonEnum: Preference>: View {
     }
 }
 
-struct PreferenceMultipleSelectionView<commonEnum: Preference>: View {
-    @Binding var preference: [commonEnum]
+struct PreferenceMultipleSelectionView<CommonEnum: Preference>: View {
+    @Binding var preference: [CommonEnum]
     
     var body: some View {
-        VStack{
-            List{
-                ForEach(commonEnum.getAllCasses(), id: \.self) { caseValue in
-                    if caseValue.rawValue != ""{
-                        HStack{
+        VStack {
+            List {
+                ForEach(Array(CommonEnum.allCases), id: \.self) { caseValue in
+                    if !caseValue.rawValue.isEmpty {
+                        HStack {
                             Text(caseValue.rawValue)
                             Spacer()
-                            if contains(caseValue){
-                                Image(systemName: "checkmark")
-                            }
-                        }.onTapGesture{
-                            if caseValue.rawValue == "None"{
-                                handleNone(caseValue)
-                            }else{
-                                addValue(caseValue)
-                            }
+                            Image(systemName: self.contains(caseValue) ? "checkmark" : "")
+                        }.onTapGesture {
+                            caseValue.rawValue == "None" ? self.handleNone(caseValue) : self.addValue(caseValue)
                         }
                     }
                 }
@@ -59,22 +52,22 @@ struct PreferenceMultipleSelectionView<commonEnum: Preference>: View {
         }
     }
     
-    private func contains(_ value: commonEnum) -> Bool{
+    private func contains(_ value: CommonEnum) -> Bool {
         return preference.contains(value)
     }
     
-    private func handleNone(_ noneValue: commonEnum) -> Void{
+    private func handleNone(_ noneValue: CommonEnum) {
         preference.removeAll()
         preference.append(noneValue)
     }
     
-    private func addValue(_ value: commonEnum) -> Void{
+    private func addValue(_ value: CommonEnum) {
         preference.removeAll { item in
             item.rawValue == "None"
         }
-        if !contains(value){
+        if !contains(value) {
             preference.append(value)
-        }else{
+        } else {
             preference.removeAll { item in
                 item == value
             }
