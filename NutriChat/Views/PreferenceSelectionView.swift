@@ -7,75 +7,56 @@
 
 import SwiftUI
 
-struct PreferenceSingleSelectionView<CommonEnum: Preference>: View {
-    @Binding var preference: CommonEnum
+protocol PreferenceSelectionScreenStruct{
+}
+
+extension PreferenceSelectionScreenStruct {
+    func preferenceMultiSection<T: Preference>(title: String, options: [T], selectedOptions: Set<T>, onSelect: @escaping (T) -> Void) -> some View {
+        Section(header: Text(title).textCase(.lowercase).font(.subheadline)) {
+            ForEach(options, id: \.self) { option in
+                if !(option.rawValue == ""){
+                    CheckmarkRow(
+                        title: option.rawValue,
+                        isSelected: selectedOptions.contains(option)
+                    ) {
+                        onSelect(option)
+                    }
+                }
+            }
+        }.headerProminence(.increased)
+    }
+    
+    func preferenceSingleSection<T: Preference>(title: String, options: [T], selectedOptions: T, onSelect: @escaping (T) -> Void) -> some View {
+        Section(header: Text(title).textCase(.lowercase).font(.subheadline)) {
+            ForEach(options, id: \.self) { option in
+                if !(option.rawValue == ""){
+                    CheckmarkRow(
+                        title: option.rawValue,
+                        isSelected: selectedOptions == option
+                    ) {
+                        onSelect(option)
+                    }
+                }
+            }
+        }.headerProminence(.increased)
+    }
+}
+
+struct CheckmarkRow: View {
+    var title: String
+    var isSelected: Bool
+    var action: () -> Void
     
     var body: some View {
-        VStack{
-            List{
-                ForEach(Array(CommonEnum.allCases), id: \.self) { caseValue in
-                    if caseValue.rawValue != ""{
-                        HStack{
-                            Text(caseValue.rawValue)
-                            Spacer()
-                            if caseValue == preference{
-                                Image(systemName: "checkmark")
-                            }
-                        }.onTapGesture{
-                            self.preference = caseValue
-                        }
-                    }
+        Button(action: action) {
+            HStack {
+                Text(title)
+                Spacer()
+                if isSelected {
+                    Image(systemName: "checkmark")
+                        .foregroundColor(.blue)
                 }
             }
         }
     }
 }
-
-struct PreferenceMultipleSelectionView<CommonEnum: Preference>: View {
-    @Binding var preference: [CommonEnum]
-    
-    var body: some View {
-        VStack {
-            List {
-                ForEach(Array(CommonEnum.allCases), id: \.self) { caseValue in
-                    if !caseValue.rawValue.isEmpty {
-                        HStack {
-                            Text(caseValue.rawValue)
-                            Spacer()
-                            Image(systemName: self.contains(caseValue) ? "checkmark" : "")
-                        }.onTapGesture {
-                            caseValue.rawValue == "None" ? self.handleNone(caseValue) : self.addValue(caseValue)
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    private func contains(_ value: CommonEnum) -> Bool {
-        return preference.contains(value)
-    }
-    
-    private func handleNone(_ noneValue: CommonEnum) {
-        preference.removeAll()
-        preference.append(noneValue)
-    }
-    
-    private func addValue(_ value: CommonEnum) {
-        preference.removeAll { item in
-            item.rawValue == "None"
-        }
-        if !contains(value) {
-            preference.append(value)
-        } else {
-            preference.removeAll { item in
-                item == value
-            }
-        }
-    }
-}
-
-//#Preview {
-//    PreferenceSingleSelectionView(preference: DietaryChoice.placeHolder)
-//    PreferenceMultipleSelectionView(preference: [DietaryChoice.placeHolder])
-//}

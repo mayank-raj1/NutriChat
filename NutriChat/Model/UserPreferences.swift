@@ -7,50 +7,48 @@
 
 import Foundation
 
-struct UserPreferences {
+struct UserPreferences: Codable {
 
     // Dietary Restrictions & Preferences
-    let allergies: [Allergy] // Array of allergy strings
-    let intolerances: [Intolerance] // Array of intolerance strings
-    let dietaryChoices: DietaryChoice // Enum for vegetarian, vegan, etc.
-    let specificRestrictions: [SpecificRestriction] // Array of specific restriction strings (keto, paleo, etc.)
+    var allergies: Set<Allergy> = []// Array of allergy strings
+    var intolerances: Set<Intolerance> = [] // Array of intolerance strings
+    var dietaryChoices: Set<DietaryChoice> = [] // Enum for vegetarian, vegan, etc.
+    var specificRestrictions: Set<SpecificRestriction> = [] // Array of specific restriction strings (keto, paleo, etc.)
 
-    // Health & Wellness Goals
-    let weightManagementGoal: WeightManagementGoal // Enum for gain, lose, maintain
-    let healthConditions: [HealthCondition] // Array of health condition strings
-    let nutrientPreferences: [NutrientPreference] // Array of preferred nutrient strings (high protein, low sodium, etc.)
-    let fitnessGoals: [FitnessGoal]// Array of fitness goal strings (muscle building, athletic performance, etc.)
+    // & Wellness Goals
+    var weightManagementGoal: WeightManagementGoal = WeightManagementGoal.placeHolder // Enum for gain, lose, maintain
+    var healthConditions: Set<HealthCondition> = [] // Array of health condition strings
+    var nutrientPreferences: Set<NutrientPreference> = [] // Array of preferred nutrient strings (high protein, low sodium, etc.)
+    var fitnessGoals: Set<FitnessGoal> = []// Array of fitness goal strings (muscle building, athletic performance, etc.)
 
-    // Cooking Habits & Skills
-    let cookingExperience: CookingExperienceLevel // Enum for beginner, intermediate, advanced
-    let preferredCookingMethods: [PreferredCookingMethod] // Array of preferred cooking method strings
-    let timeConstraints: TimeConstraint // Enum for quick meals, elaborate dishes, etc.
+    // Habits & Skills
+    var cookingExperience: CookingExperienceLevel = CookingExperienceLevel.placeHolder // Enum for beginner, intermediate, advanced
+    var preferredCookingMethods: Set<PreferredCookingMethod> = [] // Array of preferred cooking method strings
+    var timeConstraints: TimeConstraint = TimeConstraint.placeHolder // Enum for quick meals, elaborate dishes, etc.
 
-    // Taste & Preferences
-    let cuisinePreferences: [CuisinePreference] // Array of preferred cuisine strings
-    let flavourProfiles: [FlavourProfile] // Array of preferred flavour profile strings (spicy, sweet, savory, etc.)
-    let occasion: MealOccasion // Enum for weeknight meals, festive dishes, etc.
-    let culturalCuisineOpenness: CulturalOpenness // Enum for exploring new or familiar cuisines
-
-    // Nested Enums
-    
-    //Dietary Restrictions & Preferences
-    
+    // & Preferences
+    var cuisinePreferences: Set<CuisinePreference> = [] // Array of preferred cuisine strings
+    var flavourProfiles: Set<FlavourProfile> = [] // Array of preferred flavour profile strings (spicy, sweet, savory, etc.)
+    var occasion: MealOccasion = MealOccasion.placeHolder // Enum for weeknight meals, festive dishes, etc.
+    var culturalCuisineOpenness: CulturalOpenness = CulturalOpenness.placeHolder // Enum for exploring new or familiar cuisines
 }
 
-//protocol Prefrence: CaseIterable{
-////    func allCasesArays: Array<Self> {
-////        return Array(self.allCases)
-////    }
-//    
-//    func getAllCasesString() -> [String]
-//}
-protocol Preference: RawRepresentable, CaseIterable, Hashable where RawValue == String {
-    
+protocol Preference: RawRepresentable, CaseIterable, Hashable, Identifiable, Codable where RawValue == String {
+    static func getDescription() -> String
+
 }
 
+extension Preference{
+    var id: String {
+        return self.rawValue
+    }
+}
 
 enum DietaryChoice: String, Preference {
+    static func getDescription() -> String {
+        return "Do you have any dietary preference?"
+    }
+    
     case omnivore = "Omnivore"
     case vegetarian = "Vegetarian"
     case vegan = "Vegan"
@@ -58,8 +56,6 @@ enum DietaryChoice: String, Preference {
     case glutenFree = "Gluten-free"
     case dairyFree = "Dairy-free"
     case nutFree = "Nut-free"
-    case soyFree = "Soy-free"
-    case eggFree = "Egg-free"
     case none = "None"
     case placeHolder = ""
 }
@@ -74,6 +70,11 @@ enum Allergy: String, Preference {
     case wheat = "Wheat"
     case none = "None"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        
+        return "Do you have any allergies?"
+    }
 }
 
 enum Intolerance: String, Preference {
@@ -84,6 +85,11 @@ enum Intolerance: String, Preference {
     case sulfites = "Sulfites"
     case none = "None"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        
+        return "Do you have any food intolerances?"
+    }
 }
 
 enum SpecificRestriction: String, Preference {
@@ -94,14 +100,21 @@ enum SpecificRestriction: String, Preference {
     case highProtein = "High-protein"
     case none = "None"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        return "Do you follow any specific dietary restrictions?"
+    }
 }
 
-// Health & Wellness Goals
 enum WeightManagementGoal: String, Preference {
     case gain = "Gain weight"
     case lose = "Lose weight"
     case maintain = "Maintain weight"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        return "What is your weight management goal?"
+    }
 }
 
 enum HealthCondition: String, Preference {
@@ -113,6 +126,10 @@ enum HealthCondition: String, Preference {
     case cholesterol = "High cholesterol"
     case none = "None"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        return "Do you have any health conditions?"
+    }
 }
 
 enum NutrientPreference: String, Preference {
@@ -125,6 +142,10 @@ enum NutrientPreference: String, Preference {
     case lowCarb = "Low carb"
     case none = "None"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        return "Do you have any nutrient preferences?"
+    }
 }
 
 enum FitnessGoal: String, Preference {
@@ -136,14 +157,21 @@ enum FitnessGoal: String, Preference {
     case endurance = "Increased endurance"
     case none = "None"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        return "What are your fitness goals?"
+    }
 }
 
-//Cooking Habits & Skills
 enum CookingExperienceLevel: String, Preference {
     case beginner = "Beginner"
     case intermediate = "Intermediate"
     case advanced = "Advanced"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        return "What is your cooking experience level?"
+    }
 }
 
 enum PreferredCookingMethod: String, Preference {
@@ -159,6 +187,10 @@ enum PreferredCookingMethod: String, Preference {
     case slowCooking = "Slow cooking"
     case onePot = "One-pot meals"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        return "What are your preferred cooking methods?"
+    }
 }
 
 enum TimeConstraint: String, Preference {
@@ -166,9 +198,12 @@ enum TimeConstraint: String, Preference {
     case moderate = "Moderate time commitment (30-60 minutes)"
     case elaborate = "Elaborate dishes (over 60 minutes)"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        return "Do you have any time constraints for cooking?"
+    }
 }
 
-//
 enum CuisinePreference: String, Preference {
     case italian = "Italian"
     case indian = "Indian"
@@ -184,6 +219,10 @@ enum CuisinePreference: String, Preference {
     case vegan = "Vegan"
     case glutenFree = "Gluten-free"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        return "What are your preferred cuisines?"
+    }
 }
 
 enum FlavourProfile: String, Preference {
@@ -197,6 +236,10 @@ enum FlavourProfile: String, Preference {
     case bitter = "Bitter"
     case sour = "Sour"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        return "What are your preferred flavour profiles?"
+    }
 }
 
 enum CulturalOpenness: String, Preference {
@@ -204,10 +247,19 @@ enum CulturalOpenness: String, Preference {
     case familiar = "Prefer familiar cuisines"
     case balanced = "Open to both new and familiar cuisines"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        return "Are you open to exploring new cuisines?"
+    }
 }
+
 enum MealOccasion: String, Preference {
     case weeknight = "Weeknight meals"
     case weekend = "Weekend meals"
     case festive = "Festive dishes"
     case placeHolder = ""
+    
+    static func getDescription() -> String {
+        return "What are your typical meal occasions?"
+    }
 }
