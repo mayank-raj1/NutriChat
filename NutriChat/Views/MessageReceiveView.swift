@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MessageReceiveView: View {
     var message: Message
+    @State private var isVisible = false
+    
     var body: some View {
         HStack(alignment: .bottom){
             Image(systemName: "person.circle.fill")
@@ -29,6 +31,14 @@ struct MessageReceiveView: View {
             }
             Spacer()
         }.padding(.trailing)
+            .opacity(isVisible || !message.isprocessing ? 1 : 0)
+            .onAppear {
+                Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { timer in
+                                withAnimation {
+                                    self.isVisible = true
+                                }
+                            }
+                        }
     }
 }
 

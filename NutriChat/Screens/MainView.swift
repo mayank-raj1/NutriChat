@@ -9,10 +9,10 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        VStack{
-            ChatWindowView()
-            Divider().frame(height: 12)
-            SendField().padding()
+        TabView{
+            ChatWindowView().tabItem { Label("Chat", systemImage: "message.circle.fill")}
+            
+            
         }
     }
 }

@@ -15,8 +15,9 @@ struct SendField: View {
     var body: some View {
         HStack{
             TextField("Message", text: $textResponse, axis: .vertical)
-                .padding(2)
-                .textFieldStyle(.roundedBorder)
+                .padding(10)
+                .background(.tertiary)
+                .clipShape(.capsule)
                 .onSubmit() { submit }
                 .disabled(isProcessing)
             Button(action: {submit}, label: {
@@ -36,17 +37,6 @@ struct SendField: View {
             await chatHandler.handle(message: messsage)
         }
     }
-    
-//    private var pass:Void{
-//        Task{
-//            isProcessing = true
-//            print("Started")
-//            await chatHandler.handle(message: textResponse)
-//            isProcessing = false
-//            print("Ended")
-//        }
-//       
-//    }
 }
 
 #Preview {

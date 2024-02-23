@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E5239C7F2B76D55200CD8EBB /* ChatHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5239C7E2B76D55200CD8EBB /* ChatHandler.swift */; };
+		E55598012B88726D00A1B5EF /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55598002B88726D00A1B5EF /* AccountView.swift */; };
 		E5692E4F2B7079F0001E1885 /* NutriChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */; };
 		E5692E552B7079F2001E1885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5692E542B7079F2001E1885 /* Assets.xcassets */; };
 		E5692E582B7079F2001E1885 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5692E572B7079F2001E1885 /* Preview Assets.xcassets */; };
 		E5692E5F2B707BC3001E1885 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E5E2B707BC3001E1885 /* MainView.swift */; };
 		E5692E632B70ABD1001E1885 /* MessageSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E622B70ABD1001E1885 /* MessageSentView.swift */; };
 		E5692E662B70AC3C001E1885 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E652B70AC3C001E1885 /* Message.swift */; };
-		E5692E6A2B70B6DF001E1885 /* ChatWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E692B70B6DF001E1885 /* ChatWindowView.swift */; };
+		E5692E6A2B70B6DF001E1885 /* ChatViewWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E692B70B6DF001E1885 /* ChatViewWindowView.swift */; };
 		E5692E6C2B70B75C001E1885 /* MessageReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */; };
 		E5692E6E2B70C5C3001E1885 /* SendField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E6D2B70C5C3001E1885 /* SendField.swift */; };
 		E56B6B572B76B04B007846F4 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = E56B6B562B76B04B007846F4 /* GoogleGenerativeAI */; };
@@ -25,7 +26,8 @@
 		E58B8CAB2B7A0AAA00D9F4B8 /* DietaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CAA2B7A0AAA00D9F4B8 /* DietaryView.swift */; };
 		E58B8CAD2B7A0B3600D9F4B8 /* MocData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CAC2B7A0B3600D9F4B8 /* MocData.swift */; };
 		E58B8CAE2B7A10C900D9F4B8 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CA82B7A0A3800D9F4B8 /* APIKey.swift */; };
-		E5B2510E2B7AE3E800F098CB /* PrefrenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2510D2B7AE3E800F098CB /* PrefrenceView.swift */; };
+		E58C2A992B85863200C8B07F /* ChatWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58C2A982B85863200C8B07F /* ChatWindowView.swift */; };
+		E5B2510E2B7AE3E800F098CB /* PreferencesSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2510D2B7AE3E800F098CB /* PreferencesSelectionView.swift */; };
 		E5B251102B7AE47200F098CB /* HealthWellnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2510F2B7AE47200F098CB /* HealthWellnessView.swift */; };
 		E5B251122B7BA95900F098CB /* PrefrenceStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B251112B7BA95900F098CB /* PrefrenceStartView.swift */; };
 		E5B251142B7BAC3E00F098CB /* CookingHabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B251132B7BAC3E00F098CB /* CookingHabitsView.swift */; };
@@ -36,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		E5239C7E2B76D55200CD8EBB /* ChatHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHandler.swift; sourceTree = "<group>"; };
+		E55598002B88726D00A1B5EF /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		E5692E4B2B7079F0001E1885 /* NutriChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5692E4E2B7079F0001E1885 /* NutriChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriChatApp.swift; sourceTree = "<group>"; };
 		E5692E542B7079F2001E1885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +46,7 @@
 		E5692E5E2B707BC3001E1885 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E5692E622B70ABD1001E1885 /* MessageSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSentView.swift; sourceTree = "<group>"; };
 		E5692E652B70AC3C001E1885 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		E5692E692B70B6DF001E1885 /* ChatWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWindowView.swift; sourceTree = "<group>"; };
+		E5692E692B70B6DF001E1885 /* ChatViewWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewWindowView.swift; sourceTree = "<group>"; };
 		E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReceiveView.swift; sourceTree = "<group>"; };
 		E5692E6D2B70C5C3001E1885 /* SendField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendField.swift; sourceTree = "<group>"; };
 		E572F8EC2B7CFC8C00D297C3 /* PreferenceSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceSelectionView.swift; sourceTree = "<group>"; };
@@ -53,7 +56,8 @@
 		E58B8CA82B7A0A3800D9F4B8 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		E58B8CAA2B7A0AAA00D9F4B8 /* DietaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DietaryView.swift; path = NutriChat/Model/DietaryView.swift; sourceTree = SOURCE_ROOT; };
 		E58B8CAC2B7A0B3600D9F4B8 /* MocData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocData.swift; sourceTree = "<group>"; };
-		E5B2510D2B7AE3E800F098CB /* PrefrenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefrenceView.swift; sourceTree = "<group>"; };
+		E58C2A982B85863200C8B07F /* ChatWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWindowView.swift; sourceTree = "<group>"; };
+		E5B2510D2B7AE3E800F098CB /* PreferencesSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSelectionView.swift; sourceTree = "<group>"; };
 		E5B2510F2B7AE47200F098CB /* HealthWellnessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthWellnessView.swift; sourceTree = "<group>"; };
 		E5B251112B7BA95900F098CB /* PrefrenceStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefrenceStartView.swift; sourceTree = "<group>"; };
 		E5B251132B7BAC3E00F098CB /* CookingHabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingHabitsView.swift; sourceTree = "<group>"; };
@@ -125,8 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				E5692E5E2B707BC3001E1885 /* MainView.swift */,
-				E5692E692B70B6DF001E1885 /* ChatWindowView.swift */,
-				E5B2510D2B7AE3E800F098CB /* PrefrenceView.swift */,
+				E58C2A982B85863200C8B07F /* ChatWindowView.swift */,
+				E5B2510D2B7AE3E800F098CB /* PreferencesSelectionView.swift */,
+				E55598002B88726D00A1B5EF /* AccountView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -134,12 +139,11 @@
 		E5692E612B70ABC3001E1885 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E572F8EC2B7CFC8C00D297C3 /* PreferenceSelectionView.swift */,
-				E58B8CA92B7A0A8C00D9F4B8 /* Preferences */,
-				E5692E6D2B70C5C3001E1885 /* SendField.swift */,
-				E5692E622B70ABD1001E1885 /* MessageSentView.swift */,
 				E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */,
+				E58C2A972B8585F300C8B07F /* chat */,
+				E58B8CA92B7A0A8C00D9F4B8 /* Preferences */,
 				E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */,
+				E5692E692B70B6DF001E1885 /* ChatViewWindowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,12 +173,22 @@
 		E58B8CA92B7A0A8C00D9F4B8 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
+				E572F8EC2B7CFC8C00D297C3 /* PreferenceSelectionView.swift */,
 				E5B251112B7BA95900F098CB /* PrefrenceStartView.swift */,
 				E58B8CAA2B7A0AAA00D9F4B8 /* DietaryView.swift */,
 				E5B2510F2B7AE47200F098CB /* HealthWellnessView.swift */,
 				E5B251132B7BAC3E00F098CB /* CookingHabitsView.swift */,
 			);
 			path = Preferences;
+			sourceTree = "<group>";
+		};
+		E58C2A972B8585F300C8B07F /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				E5692E6D2B70C5C3001E1885 /* SendField.swift */,
+				E5692E622B70ABD1001E1885 /* MessageSentView.swift */,
+			);
+			path = chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +273,10 @@
 				E58B8CA32B79C03300D9F4B8 /* BouncingDots.swift in Sources */,
 				E5692E6E2B70C5C3001E1885 /* SendField.swift in Sources */,
 				E5692E5F2B707BC3001E1885 /* MainView.swift in Sources */,
-				E5B2510E2B7AE3E800F098CB /* PrefrenceView.swift in Sources */,
+				E5B2510E2B7AE3E800F098CB /* PreferencesSelectionView.swift in Sources */,
 				E5692E662B70AC3C001E1885 /* Message.swift in Sources */,
 				E5239C7F2B76D55200CD8EBB /* ChatHandler.swift in Sources */,
+				E58C2A992B85863200C8B07F /* ChatWindowView.swift in Sources */,
 				E5B251122B7BA95900F098CB /* PrefrenceStartView.swift in Sources */,
 				E58B8CAD2B7A0B3600D9F4B8 /* MocData.swift in Sources */,
 				E572F8ED2B7CFC8C00D297C3 /* PreferenceSelectionView.swift in Sources */,
@@ -269,10 +284,11 @@
 				E5692E632B70ABD1001E1885 /* MessageSentView.swift in Sources */,
 				E5692E6C2B70B75C001E1885 /* MessageReceiveView.swift in Sources */,
 				E58B8CAB2B7A0AAA00D9F4B8 /* DietaryView.swift in Sources */,
-				E5692E6A2B70B6DF001E1885 /* ChatWindowView.swift in Sources */,
+				E5692E6A2B70B6DF001E1885 /* ChatViewWindowView.swift in Sources */,
 				E5B251102B7AE47200F098CB /* HealthWellnessView.swift in Sources */,
 				E58B8CAE2B7A10C900D9F4B8 /* APIKey.swift in Sources */,
 				E5B251142B7BAC3E00F098CB /* CookingHabitsView.swift in Sources */,
+				E55598012B88726D00A1B5EF /* AccountView.swift in Sources */,
 				E58B8CA52B7A01F300D9F4B8 /* UserPreferences.swift in Sources */,
 				E57DD54C2B7EEC9F0053C23E /* User.swift in Sources */,
 			);
