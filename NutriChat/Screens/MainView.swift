@@ -10,10 +10,13 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView{
-            ChatWindowView().tabItem { Label("Chat", systemImage: "message.circle.fill")}
-            
-            
-        }
+            Recipes().tabItem { Label("Recipes", systemImage: "book.pages")
+            }
+            ChatWindowView().tabItem {
+                Label("Chat", systemImage: "message")
+            }
+            AccountView().tabItem { Label("Account", systemImage: "person.crop.circle") }
+        }.tint(.green)
     }
 }
 

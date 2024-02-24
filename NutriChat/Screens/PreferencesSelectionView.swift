@@ -10,8 +10,9 @@ import SwiftUI
 struct PreferencesSelectionView: View {
     @AppStorage("user") private var userData: Data?
     @State var selectedTab = 0
-    @StateObject var user: User = User(name: "John Doe")
+    var user: User = User(name: "")
     @Binding var isSelecting: Bool
+    @State private var alertItem: AlertItem?
     
     var body: some View {
         NavigationStack{
@@ -47,10 +48,22 @@ struct PreferencesSelectionView: View {
                     }
                 })
             }).environmentObject(user)
+                .onAppear(perform: {
+                    guard let userData = self.userData else{
+                        return
+                    }
+                    do{
+                        //user = try JSONDecoder().decode(User.self, from: userData)
+                    }
+                    catch{
+                        //
+                    }
+                })
         }
     }
     
     private func save() -> Void{
+        
         isSelecting = false
     }
 }

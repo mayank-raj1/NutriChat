@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct AccountView: View {
-    @State var isSelecting: Bool = false
+    @AppStorage("user") private var userData: Data?
     
+    @State private var alertItem: AlertItem?
+    @StateObject var user: User = User(name: "John Doe")
+    @State var isSelecting: Bool = false
     var body: some View {
         Form{
             Section("Preferences") {
@@ -19,7 +22,13 @@ struct AccountView: View {
             }
         }.sheet(isPresented: $isSelecting, content: {
             PreferencesSelectionView(isSelecting: $isSelecting)
-        })
+        }).onAppear()
+    }
+    
+    private func loadData() -> Void{
+        do{
+            
+        }
     }
 }
 
