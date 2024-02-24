@@ -21,17 +21,17 @@ final class ChatHandler: ObservableObject{
     }
     
     func handle(message: String) async -> Void{
-        print(message)
         addUserMessage(message: message)
         addSystemMessage()
         do{
             let response = try await chat.sendMessage(message)
-            messeges[messeges.count-1].message = response.text ?? "Oppise daisy"
+            messeges[messeges.count-1].message = response.text ?? "An error ooucred"
             messeges[messeges.count-1].isprocessing = false
             //addSystemMessage(message: response.text ?? "Its Tripy")
         }
         catch{
-            print(error.localizedDescription)
+            messeges[messeges.count-1].message = "An error ooucred"
+            messeges[messeges.count-1].isprocessing = false
         }
     }
     

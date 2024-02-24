@@ -10,7 +10,12 @@ import SwiftUI
 struct SendField: View {
     @EnvironmentObject var chatHandler: ChatHandler
     @State var textResponse = ""
-    @State var isProcessing = false
+    var isProcessing: Bool {
+        if chatHandler.messeges.count>0{
+            return chatHandler.messeges[chatHandler.messeges.count - 1].isprocessing
+        }
+        return false
+    }
     
     var body: some View {
         HStack{
@@ -21,12 +26,11 @@ struct SendField: View {
                 .onSubmit() { submit }
                 .disabled(isProcessing)
             Button(action: {submit}, label: {
-                    Image(systemName: "paperplane.circle.fill")
+                    Image(systemName: "arrow.up.circle.fill")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 40)
                 }).disabled(isProcessing)
-
         }
     }
     
