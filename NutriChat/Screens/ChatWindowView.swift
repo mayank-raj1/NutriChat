@@ -12,12 +12,12 @@ struct ChatWindowView: View {
         VStack{
             ChatViewWindowView()
             Divider().frame(height: 12)
-            SendField().padding()
+            SendField().padding().background(.background)
         }
     }
 }
-//
-//#Preview {
-//    //ChatWindowView().environmentObject(ChatHandler())
-//}
+
+#Preview {
+    ChatWindowView().environmentObject(ChatHandler())
+}
 

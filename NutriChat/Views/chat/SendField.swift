@@ -16,7 +16,7 @@ struct SendField: View {
         HStack{
             TextField("Message", text: $textResponse, axis: .vertical)
                 .padding(10)
-                .background(.tertiary)
+                .background(.ultraThickMaterial)
                 .clipShape(.capsule)
                 .onSubmit() { submit }
                 .disabled(isProcessing)

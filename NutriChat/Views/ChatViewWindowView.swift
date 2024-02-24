@@ -10,15 +10,20 @@ import SwiftUI
 struct ChatViewWindowView: View {
     @EnvironmentObject var chatHandler: ChatHandler
     var body: some View {
-        List {
-            ForEach(chatHandler.messeges) { message in
-                if message.participant == .user{
-                    MessageSentView(message: message)
-                }else{
-                    MessageReceiveView(message: message)
+        ZStack{
+            ScrollView{
+                ForEach(chatHandler.messeges) { message in
+                    if message.participant == .user{
+                        MessageSentView(message: message)
+                    }else{
+                        MessageReceiveView(message: message)
+                    }
                 }
+                Spacer()
             }
-        }.listStyle(.plain)
+        }.background {
+            Image("chatBg").brightness(-0.13)
+        }
     }
 }
 

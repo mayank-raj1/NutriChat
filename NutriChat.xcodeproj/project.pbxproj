@@ -144,7 +144,6 @@
 		E5692E612B70ABC3001E1885 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */,
 				E58C2A972B8585F300C8B07F /* chat */,
 				E58B8CA92B7A0A8C00D9F4B8 /* Preferences */,
 				E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */,
@@ -191,6 +190,7 @@
 		E58C2A972B8585F300C8B07F /* chat */ = {
 			isa = PBXGroup;
 			children = (
+				E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */,
 				E5692E6D2B70C5C3001E1885 /* SendField.swift */,
 				E5692E622B70ABD1001E1885 /* MessageSentView.swift */,
 			);

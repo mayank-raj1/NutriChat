@@ -9,7 +9,10 @@ import SwiftUI
 
 struct PrefrenceStartView: View {
     var body: some View {
-        Text("Lets get you know about you!")
+        VStack{
+            Image("getToKnow").resizable().aspectRatio(contentMode: .fit).frame(width: 400)
+            Text("Lets get you know about you!").font(.largeTitle).multilineTextAlignment(.center)
+        }
     }
 }
 

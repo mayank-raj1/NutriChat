@@ -18,6 +18,8 @@ struct MessageReceiveView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 30)
                 .foregroundStyle(.teal)
+                .background(.primary)
+                .clipShape(Circle())
                 
             if message.isprocessing{
                 BouncingDots().padding().background(Color(UIColor.systemGray5)).clipShape(.rect(cornerRadius: 15))
@@ -43,6 +45,6 @@ struct MessageReceiveView: View {
 }
 
 #Preview {
-    MessageReceiveView(message: MocDate.messageRecive)
+    MessageReceiveView(message: MocDate.message)
 }
 
