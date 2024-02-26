@@ -59,5 +59,5 @@ struct HealthWellnessView: View, PreferenceSelectionScreenStruct {
 }
 
 #Preview {
-    HealthWellnessView().environmentObject(UserPreferencesMockData.generateMocUser())
+    HealthWellnessView().environmentObject(MocDataGenerator.generateMocUser())
 }

@@ -73,5 +73,5 @@ struct DietaryView: View, PreferenceSelectionScreenStruct {
 //var specificRestrictions: Set<SpecificRestriction> = [] // Array of specific restriction strings (keto, paleo, etc.)
 
 #Preview {
-    DietaryView().environmentObject(UserPreferencesMockData.generateMocUser())
+    DietaryView().environmentObject(MocDataGenerator.generateMocUser())
 }

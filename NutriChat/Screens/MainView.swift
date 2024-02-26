@@ -11,7 +11,7 @@ struct MainView: View {
     var body: some View {
         NavigationStack{
             TabView{
-                Recipes().tabItem { Label("Recipes", systemImage: "book.pages")
+                RecipesView().tabItem { Label("Recipes", systemImage: "book.pages")
                 }
                 ChatWindowView()
                     .tabItem {

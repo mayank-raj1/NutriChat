@@ -10,20 +10,20 @@ import SwiftUI
 
 final class User: ObservableObject, Identifiable, Codable{
     var id: String
-    var firstName: String
-    var lastName: String
-    var age: Int
-    var gender: String
-
+    @Published var firstName: String
+    @Published var lastName: String
+    @Published var age: Int
+    @Published var sex: String
+    let sexes = ["Male", "Female", "Other"]
     @Published var preferences: UserPreferences = UserPreferences()
     
-    init(firstName: String = "", lastName: String = "", age: Int = 18, gender: String = "") {
+    init(firstName: String = "", lastName: String = "", age: Int = 0, sex: String = "other") {
         self.id = UUID().uuidString
         self.firstName = firstName
         self.lastName = lastName
         self.preferences = UserPreferences()
         self.age = age
-        self.gender = gender
+        self.sex = sex
     }
     
     enum CodingKeys: String, CodingKey {
@@ -37,7 +37,7 @@ final class User: ObservableObject, Identifiable, Codable{
         self.lastName = try container.decode(String.self, forKey: .lastName)
         self.preferences = try container.decode(UserPreferences.self, forKey: .preferences)
         self.age = try container.decode(Int.self, forKey: .age)
-        self.gender = try container.decode(String.self, forKey: .gender)
+        self.sex = try container.decode(String.self, forKey: .gender)
     }
 
     func encode(to encoder: Encoder) throws {
@@ -47,6 +47,15 @@ final class User: ObservableObject, Identifiable, Codable{
         try container.encode(lastName, forKey: .lastName)
         try container.encode(preferences, forKey: .preferences)
         try container.encode(age, forKey: .age)
-        try container.encode(gender, forKey: .gender)
+        try container.encode(sex, forKey: .gender)
+    }
+    
+    func replace(with: User) -> Void{
+        self.id = with.id
+        self.firstName = with.firstName
+        self.lastName = with.lastName
+        self.preferences = with.preferences
+        self.age = with.age
+        self.sex = with.sex
     }
 }

@@ -56,7 +56,7 @@ struct CookingHabitsView: View, PreferenceSelectionScreenStruct {
 }
 
 #Preview {
-    CookingHabitsView().environmentObject(UserPreferencesMockData.generateMocUser())
+    CookingHabitsView().environmentObject(MocDataGenerator.generateMocUser())
 }
 //// Habits & Skills
 

@@ -7,25 +7,25 @@
 
 import Foundation
 
-final class Recipe: ObservableObject, Identifiable, Hashable{
+struct Recipe: Identifiable, Hashable{
     static func == (lhs: Recipe, rhs: Recipe) -> Bool {
         return lhs.hashValue == rhs.hashValue
     }
     
     var id = UUID()
     var name: String = ""
-    var catagory: String
-    var steps: String
+    var category: String
+    var steps: [String]
     var tags: [String]
     
-    init(name: String, catagory: String, steps: String, tags: [String]) {
+    init(name: String, catagory: String, steps: [String], tags: [String]) {
         self.name = name
-        self.catagory = catagory
+        self.category = catagory
         self.steps = steps
         self.tags = tags
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(name+catagory+steps+tags.joined())
+        hasher.combine(name+category+steps.joined()+tags.joined())
     }
 }

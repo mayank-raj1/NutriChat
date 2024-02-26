@@ -7,16 +7,14 @@
 
 import SwiftUI
 
-struct Recipes: View {
+struct RecipesView: View {
     var body: some View {
         VStack{
-            Text("Recipes")
-            Image("recipes_tab").resizable().scaledToFit()
-                .frame(width: 40)
+            RecipeListVIew(recipeBook: MocDataGenerator.recipeBook)
         }
     }
 }
 
 #Preview {
-    Recipes()
+    RecipesView()
 }
