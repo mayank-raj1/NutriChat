@@ -21,6 +21,7 @@
 		E5692E6C2B70B75C001E1885 /* MessageReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */; };
 		E5692E6E2B70C5C3001E1885 /* SendField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E6D2B70C5C3001E1885 /* SendField.swift */; };
 		E56B6B572B76B04B007846F4 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = E56B6B562B76B04B007846F4 /* GoogleGenerativeAI */; };
+		E570207A2B8AB887005DFDDA /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57020792B8AB886005DFDDA /* Recipe.swift */; };
 		E572F8ED2B7CFC8C00D297C3 /* PreferenceSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E572F8EC2B7CFC8C00D297C3 /* PreferenceSelectionView.swift */; };
 		E57DD54C2B7EEC9F0053C23E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57DD54B2B7EEC9F0053C23E /* User.swift */; };
 		E58B8CA32B79C03300D9F4B8 /* BouncingDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */; };
@@ -53,6 +54,7 @@
 		E5692E692B70B6DF001E1885 /* ChatViewWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewWindowView.swift; sourceTree = "<group>"; };
 		E5692E6B2B70B75C001E1885 /* MessageReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageReceiveView.swift; sourceTree = "<group>"; };
 		E5692E6D2B70C5C3001E1885 /* SendField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendField.swift; sourceTree = "<group>"; };
+		E57020792B8AB886005DFDDA /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		E572F8EC2B7CFC8C00D297C3 /* PreferenceSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceSelectionView.swift; sourceTree = "<group>"; };
 		E57DD54B2B7EEC9F0053C23E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncingDots.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				E5692E652B70AC3C001E1885 /* Message.swift */,
 				E58B8CA42B7A01F300D9F4B8 /* UserPreferences.swift */,
 				E57DD54B2B7EEC9F0053C23E /* User.swift */,
+				E57020792B8AB886005DFDDA /* Recipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				E5692E632B70ABD1001E1885 /* MessageSentView.swift in Sources */,
 				E5692E6C2B70B75C001E1885 /* MessageReceiveView.swift in Sources */,
 				E58B8CAB2B7A0AAA00D9F4B8 /* DietaryView.swift in Sources */,
+				E570207A2B8AB887005DFDDA /* Recipe.swift in Sources */,
 				E5692E6A2B70B6DF001E1885 /* ChatViewWindowView.swift in Sources */,
 				E5B251102B7AE47200F098CB /* HealthWellnessView.swift in Sources */,
 				E58B8CAE2B7A10C900D9F4B8 /* APIKey.swift in Sources */,

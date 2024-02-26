@@ -11,10 +11,13 @@ struct AccountView: View {
     @AppStorage("user") private var userData: Data?
     
     @State private var alertItem: AlertItem?
-    @StateObject var user: User = User(name: "John Doe")
+    @StateObject var user: User = User()
     @State var isSelecting: Bool = false
     var body: some View {
         Form{
+            Section("Deatils") {
+                TextField("Name", text: $user.name)
+            }
             Section("Preferences") {
                 Button("Change Preferences") {
                     isSelecting = true

@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ChatWindowView: View {
     var body: some View {
-        VStack{
-            ChatViewWindowView()
-            Divider().frame(height: 12)
-            SendField().padding().background(.background)
+        NavigationStack{
+            VStack{
+                ChatViewWindowView()
+                Divider().frame(height: 12)
+                SendField().padding().background(.background)
+            }
         }
     }
 }

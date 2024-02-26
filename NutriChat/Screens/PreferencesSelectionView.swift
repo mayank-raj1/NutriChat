@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct PreferencesSelectionView: View {
+    // User Model Data
     @AppStorage("user") private var userData: Data?
+    @StateObject var user: User = User()
+    
+    // View
     @State var selectedTab = 0
-    @StateObject var user: User = User(name: "")
     @Binding var isSelecting: Bool
     //@State private var alertItem: AlertItem?
-    @State private var isShowingAlert: Bool = false
+    //@State private var isShowingAlert: Bool = false
+    
     var body: some View {
         NavigationStack{
             TabView(selection: $selectedTab,
@@ -23,7 +27,7 @@ struct PreferencesSelectionView: View {
                 HealthWellnessView().tag(2)
                 CookingHabitsView().tag(3)
             })
-            .tabViewStyle(.page).toolbar(content: {
+            .tabViewStyle(.page(indexDisplayMode: .never)).toolbar(content: {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Cancel") {
                         isSelecting = false
@@ -48,18 +52,18 @@ struct PreferencesSelectionView: View {
             .environmentObject(user)
             .onAppear(perform: {
                 guard let userData = self.userData else{
-                    print("merh")
                     return
                 }
                 do{
                     let storageUser = try JSONDecoder().decode(User.self, from: userData)
                     user.id = storageUser.id
-                    user.name = storageUser.name
+                    user.firstName = storageUser.firstName
+                    user.lastName = storageUser.lastName
                     user.preferences = storageUser.preferences
                     
                 }
                 catch{
-                    print("as")
+                    
                 }
             })
         }

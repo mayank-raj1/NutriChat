@@ -26,7 +26,7 @@ struct SendField: View {
                 .onSubmit() { submit }
                 .disabled(isProcessing)
             Button(action: {submit}, label: {
-                    Image(systemName: "arrow.up.circle.fill")
+                Image(systemName: isProcessing ? "square.circle.fill" : "arrow.up.circle.fill")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 40)

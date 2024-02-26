@@ -31,6 +31,8 @@ struct UserPreferences: Codable {
     var flavourProfiles: Set<FlavourProfile> = [] // Array of preferred flavour profile strings (spicy, sweet, savory, etc.)
     var occasion: MealOccasion = MealOccasion.placeHolder // Enum for weeknight meals, festive dishes, etc.
     var culturalCuisineOpenness: CulturalOpenness = CulturalOpenness.placeHolder // Enum for exploring new or familiar cuisines
+    
+    
 }
 
 protocol Preference: RawRepresentable, CaseIterable, Hashable, Identifiable, Codable where RawValue == String {
