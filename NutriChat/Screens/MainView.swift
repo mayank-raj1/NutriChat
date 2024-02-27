@@ -12,7 +12,7 @@ struct MainView: View {
         NavigationStack{
             TabView{
                 RecipesView().tabItem { Label("Recipes", systemImage: "book.pages")
-                }
+                }.navigationTitle("Recipes").navigationBarTitleDisplayMode(.large)
                 ChatWindowView()
                     .tabItem {
                     Label("Chat", systemImage: "message")

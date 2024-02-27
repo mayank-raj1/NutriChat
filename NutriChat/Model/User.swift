@@ -17,7 +17,7 @@ final class User: ObservableObject, Identifiable, Codable{
     let sexes = ["Male", "Female", "Other"]
     @Published var preferences: UserPreferences = UserPreferences()
     
-    init(firstName: String = "", lastName: String = "", age: Int = 0, sex: String = "other") {
+    init(firstName: String = "", lastName: String = "", age: Int = 18, sex: String = "other") {
         self.id = UUID().uuidString
         self.firstName = firstName
         self.lastName = lastName

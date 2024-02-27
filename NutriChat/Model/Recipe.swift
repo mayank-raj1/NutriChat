@@ -15,12 +15,14 @@ struct Recipe: Identifiable, Hashable{
     var id = UUID()
     var name: String = ""
     var category: String
+    var ingredients: [String]
     var steps: [String]
     var tags: [String]
     
-    init(name: String, catagory: String, steps: [String], tags: [String]) {
+    init(name: String, category: String, ingredients: [String], steps: [String], tags: [String]) {
         self.name = name
-        self.category = catagory
+        self.category = category
+        self.ingredients = ingredients
         self.steps = steps
         self.tags = tags
     }

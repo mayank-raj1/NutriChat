@@ -33,6 +33,7 @@
 		E58B8CAD2B7A0B3600D9F4B8 /* MocData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CAC2B7A0B3600D9F4B8 /* MocData.swift */; };
 		E58B8CAE2B7A10C900D9F4B8 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B8CA82B7A0A3800D9F4B8 /* APIKey.swift */; };
 		E58C2A992B85863200C8B07F /* ChatWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58C2A982B85863200C8B07F /* ChatWindowView.swift */; };
+		E599FE5B2B8D315D0047DFB1 /* RecipeDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599FE5A2B8D315D0047DFB1 /* RecipeDetailedView.swift */; };
 		E5B2510E2B7AE3E800F098CB /* PreferencesSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2510D2B7AE3E800F098CB /* PreferencesSelectionView.swift */; };
 		E5B251102B7AE47200F098CB /* HealthWellnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2510F2B7AE47200F098CB /* HealthWellnessView.swift */; };
 		E5B251122B7BA95900F098CB /* PrefrenceStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B251112B7BA95900F098CB /* PrefrenceStartView.swift */; };
@@ -69,6 +70,7 @@
 		E58B8CAA2B7A0AAA00D9F4B8 /* DietaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DietaryView.swift; path = NutriChat/Model/DietaryView.swift; sourceTree = SOURCE_ROOT; };
 		E58B8CAC2B7A0B3600D9F4B8 /* MocData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocData.swift; sourceTree = "<group>"; };
 		E58C2A982B85863200C8B07F /* ChatWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWindowView.swift; sourceTree = "<group>"; };
+		E599FE5A2B8D315D0047DFB1 /* RecipeDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailedView.swift; sourceTree = "<group>"; };
 		E5B2510D2B7AE3E800F098CB /* PreferencesSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSelectionView.swift; sourceTree = "<group>"; };
 		E5B2510F2B7AE47200F098CB /* HealthWellnessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthWellnessView.swift; sourceTree = "<group>"; };
 		E5B251112B7BA95900F098CB /* PrefrenceStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefrenceStartView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				E537F9192B8CA11800BC55D7 /* RecipeCellView.swift */,
 				E537F91B2B8CD90A00BC55D7 /* RecipeListVIew.swift */,
+				E599FE5A2B8D315D0047DFB1 /* RecipeDetailedView.swift */,
 			);
 			path = recipeViews;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				E58C2A992B85863200C8B07F /* ChatWindowView.swift in Sources */,
 				E5B251122B7BA95900F098CB /* PrefrenceStartView.swift in Sources */,
 				E58B8CAD2B7A0B3600D9F4B8 /* MocData.swift in Sources */,
+				E599FE5B2B8D315D0047DFB1 /* RecipeDetailedView.swift in Sources */,
 				E572F8ED2B7CFC8C00D297C3 /* PreferenceSelectionView.swift in Sources */,
 				E5692E4F2B7079F0001E1885 /* NutriChatApp.swift in Sources */,
 				E537F91A2B8CA11800BC55D7 /* RecipeCellView.swift in Sources */,

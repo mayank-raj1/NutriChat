@@ -22,12 +22,14 @@ struct PreferencesSelectionView: View {
         NavigationStack{
             TabView(selection: $selectedTab,
                     content:  {
-                PrefrenceStartView().tag(0)
+                PrefrenceStartView(pageNumber: $selectedTab).tag(0)
                 DietaryView().tag(1)
                 HealthWellnessView().tag(2)
                 CookingHabitsView().tag(3)
             })
-            .tabViewStyle(.page(indexDisplayMode: .never)).toolbar(content: {
+            
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .toolbar(content: {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Cancel") {
                         isSelecting = false
@@ -43,7 +45,7 @@ struct PreferencesSelectionView: View {
                         Button("Back") { selectedTab-=1 }
                     }
                     Spacer()
-                    if selectedTab<3{
+                    if selectedTab<3 && selectedTab>0{
                         Button("Next") {
                             selectedTab += 1}
                     }

@@ -9,12 +9,19 @@ import SwiftUI
 
 struct RecipeListVIew: View {
     var recipeBook: RecipeBook
+    @State var isShowingDetailedRecipe: Bool = false
+    @State var detailedRecipe: Recipe = MocDataGenerator.recipe1
     var body: some View {
         VStack{
             List(recipeBook.recipes) { recipe in
-                RecipeCellView(recipe: recipe)
+                RecipeCellView(recipe: recipe).onTapGesture(perform: {
+                    detailedRecipe = recipe
+                    isShowingDetailedRecipe = true
+                })
             }
-        }
+        }.sheet(isPresented: $isShowingDetailedRecipe, content: {
+            RecipeDetailedView(recipe: detailedRecipe, isShowingDetailedRecipe: $isShowingDetailedRecipe)
+        })
     }
 }
 

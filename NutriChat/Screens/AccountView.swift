@@ -19,8 +19,8 @@ struct AccountView: View {
                 TextField("Fist Name", text: $user.firstName)
                 TextField("Last Name", text: $user.lastName)
                 Picker("Age", selection: $user.age) {
-                    ForEach(18..<100){
-                        Text("\($0)")
+                    ForEach(0..<100){
+                        Text("\($0+1)")
                     }
                 }
                 Picker("Sex", selection: $user.sex){
@@ -50,8 +50,7 @@ struct AccountView: View {
             return
         }
         do{
-            //let storageUser = try JSONDecoder().decode(User.self, from: userData)
-            print("\(userData)")
+            print(String(data: userData, encoding: .utf8)!)
             user.replace(with: try JSONDecoder().decode(User.self, from: userData))
         }catch{
             
