@@ -15,12 +15,14 @@ struct PrefrenceStartView: View {
             Text("Let's get to know about you!")
                 .font(.largeTitle).multilineTextAlignment(.center).padding()
             Button(action: {pageNumber += 1}, label: {
-                Text("Dish Out the Details!").font(.title2).padding(10).frame(maxWidth: .infinity)
-            }).buttonStyle(.borderedProminent).padding(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
+                Text("Dish Out the Details!").font(.title2).padding(10).frame(maxWidth: .infinity).foregroundStyle(.foreground)
+            })
+            .buttonStyle(.borderedProminent)
+                .padding(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
         }
     }
 }
 
-//#Preview {
-//    PrefrenceStartView()
-//}
+#Preview {
+    PrefrenceStartView(pageNumber: .constant(0))
+}

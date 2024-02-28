@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct AccountView: View {
+    //User Data
     @AppStorage("user") private var userData: Data?
-    
-    @State private var alertItem: AlertItem?
     @StateObject var user: User = User()
+    
+    //View
     @State var isSelecting: Bool = false
+    @State private var alertItem: AlertItem?
+    @State private var isShowingAlert: Bool = false
     var body: some View {
         Form{
             Section("Details") {
@@ -39,29 +42,39 @@ struct AccountView: View {
             }
         }.sheet(isPresented: $isSelecting, content: {
             PreferencesSelectionView(isSelecting: $isSelecting)
-        }).onAppear {
+        })
+        .alert(alertItem?.title ?? "", isPresented: $isShowingAlert, actions: {
+            Button(alertItem?.dismissbutton ?? "", action: {isShowingAlert = false})
+                   }, message: {
+                       Text(alertItem?.message ?? "")
+            })
+        .onAppear {
             loadData()
         }
     }
     
     private func loadData() -> Void{
         guard let userData = self.userData else{
-            print("nja")
+            alertItem = AlertContext.dataNotLoaded
+            isShowingAlert = true
             return
         }
         do{
-            print(String(data: userData, encoding: .utf8)!)
             user.replace(with: try JSONDecoder().decode(User.self, from: userData))
         }catch{
-            
+            alertItem = AlertContext.dataNotLoaded
+            isShowingAlert = true
         }
     }
     
     private func saveData() -> Void{
         do {
             userData = try JSONEncoder().encode(user)
+            alertItem = AlertContext.detailsSaved
+            isShowingAlert = true
         }catch{
-            //
+            alertItem = AlertContext.detailsNotSaved
+            isShowingAlert = true
         }
     }
 }
