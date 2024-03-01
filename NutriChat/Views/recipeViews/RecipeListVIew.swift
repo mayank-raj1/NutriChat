@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct RecipeListVIew: View {
-    var recipeBook: RecipeBook
+    var recipes: [Recipe]
     @State var isShowingDetailedRecipe: Bool = false
     @State var detailedRecipe: Recipe = MocDataGenerator.recipe1
     var body: some View {
         VStack{
-            List(recipeBook.recipes) { recipe in
+            List(recipes, id: \.self) { recipe in
                 RecipeCellView(recipe: recipe).onTapGesture(perform: {
                     detailedRecipe = recipe
                     isShowingDetailedRecipe = true
@@ -26,5 +26,5 @@ struct RecipeListVIew: View {
 }
 
 #Preview {
-    RecipeListVIew(recipeBook: MocDataGenerator.recipeBook)
+    RecipeListVIew(recipes: MocDataGenerator.recipeBook.recipes)
 }

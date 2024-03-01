@@ -11,6 +11,7 @@
 		E537F91A2B8CA11800BC55D7 /* RecipeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537F9192B8CA11800BC55D7 /* RecipeCellView.swift */; };
 		E537F91C2B8CD90A00BC55D7 /* RecipeListVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537F91B2B8CD90A00BC55D7 /* RecipeListVIew.swift */; };
 		E537F91E2B8CD9C400BC55D7 /* RecipeBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537F91D2B8CD9C300BC55D7 /* RecipeBook.swift */; };
+		E54DB2AE2B913FE200B75841 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DB2AD2B913FE200B75841 /* NetworkManager.swift */; };
 		E55598012B88726D00A1B5EF /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55598002B88726D00A1B5EF /* AccountView.swift */; };
 		E55598032B89063400A1B5EF /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55598022B89063400A1B5EF /* AlertItem.swift */; };
 		E55598052B89200700A1B5EF /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55598042B89200700A1B5EF /* RecipesView.swift */; };
@@ -48,6 +49,7 @@
 		E537F9192B8CA11800BC55D7 /* RecipeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellView.swift; sourceTree = "<group>"; };
 		E537F91B2B8CD90A00BC55D7 /* RecipeListVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListVIew.swift; sourceTree = "<group>"; };
 		E537F91D2B8CD9C300BC55D7 /* RecipeBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBook.swift; sourceTree = "<group>"; };
+		E54DB2AD2B913FE200B75841 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E55598002B88726D00A1B5EF /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		E55598022B89063400A1B5EF /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		E55598042B89200700A1B5EF /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				E58B8CAC2B7A0B3600D9F4B8 /* MocData.swift */,
+				E54DB2AD2B913FE200B75841 /* NetworkManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				E572F8ED2B7CFC8C00D297C3 /* PreferenceSelectionView.swift in Sources */,
 				E5692E4F2B7079F0001E1885 /* NutriChatApp.swift in Sources */,
 				E537F91A2B8CA11800BC55D7 /* RecipeCellView.swift in Sources */,
+				E54DB2AE2B913FE200B75841 /* NetworkManager.swift in Sources */,
 				E55598032B89063400A1B5EF /* AlertItem.swift in Sources */,
 				E5692E632B70ABD1001E1885 /* MessageSentView.swift in Sources */,
 				E5692E6C2B70B75C001E1885 /* MessageReceiveView.swift in Sources */,

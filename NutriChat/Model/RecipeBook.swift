@@ -5,7 +5,7 @@
 //  Created by Mayank Raj on 2024-02-26.
 //
 
-import SwiftUI
+import Foundation
 
 struct RecipeBook{
     var recipes: [Recipe]
