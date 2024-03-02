@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct RecipesView: View {
+    @AppStorage("user") var userData: Data?
+    @State var recipes: [Recipe] = []
+    let networkManager = NetworkManager()
     var body: some View {
-        @AppStorage("user") var userData: Data?
-        @State var recipes: [Recipe] = []
-        let networkManager = NetworkManager()
         ZStack{
             RecipeListVIew(recipes: recipes)
             if recipes.count==0{
@@ -24,9 +24,8 @@ struct RecipesView: View {
         .overlay(alignment: .bottomTrailing) {
             Button("Generate") {
                 Task{
-                    print("Refresh")
                     let response =  await networkManager.getRecipes(userData!)
-                    recipes = try JSONDecoder().decode([Recipe].self, from: response)
+                    self.recipes = try JSONDecoder().decode([Recipe].self, from: response)
                     print(try JSONDecoder().decode([Recipe].self, from: response))
                 }
             }.buttonStyle(.borderedProminent).padding()

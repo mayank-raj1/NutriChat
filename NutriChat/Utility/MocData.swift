@@ -136,5 +136,5 @@ struct MocDataGenerator {
             ],
             tags: ["Baking", "Dessert", "Banana"]
         )
-    static let recipeBook = RecipeBook(recipes: [recipe1, recipe2, recipe3, recipe3, recipe4, recipe5])
+    static let recipes = [recipe1, recipe2, recipe3, recipe3, recipe4, recipe5]
 }

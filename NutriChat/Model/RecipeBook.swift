@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct RecipeBook{
-    var recipes: [Recipe]
+final class RecipeBook: ObservableObject{
+    @Published var recipes: [Recipe]
+    init() {
+        self.recipes = []
+    }
 }

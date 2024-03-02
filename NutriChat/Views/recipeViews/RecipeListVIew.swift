@@ -26,5 +26,5 @@ struct RecipeListVIew: View {
 }
 
 #Preview {
-    RecipeListVIew(recipes: MocDataGenerator.recipeBook.recipes)
+    RecipeListVIew(recipes: MocDataGenerator.recipes)
 }
