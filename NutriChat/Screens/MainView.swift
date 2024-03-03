@@ -9,17 +9,20 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        NavigationStack{
-            TabView{
-                RecipesView().tabItem { Label("Recipes", systemImage: "book.pages")
-                }
-                ChatWindowView()
-                    .tabItem {
-                    Label("Chat", systemImage: "message")
-                }
-                AccountView().tabItem { Label("Account", systemImage: "person.crop.circle") }
-            }.tint(.green)
-        }
+        TabView{
+            NavigationStack{
+                RecipesView().navigationTitle("Recipes 📖").toolbarTitleDisplayMode(.inlineLarge)
+            }.tabItem { Label("Recipes", systemImage: "book.pages")
+            }
+            NavigationStack{
+                ChatWindowView().navigationTitle("Chat 💬").toolbarTitleDisplayMode(.inlineLarge).toolbarBackground(.visible, for: .navigationBar)
+            }.tabItem {
+                Label("Chat", systemImage: "message")
+            }
+            NavigationStack{
+                AccountView().navigationTitle("Account 😎").toolbarTitleDisplayMode(.inlineLarge)
+            }.tabItem { Label("Account", systemImage: "person.crop.circle") }
+        }.tint(.green)
     }
 }
 
