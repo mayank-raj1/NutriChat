@@ -10,18 +10,18 @@ import SwiftUI
 
 struct NetworkManager{
     private var url = URL(string: "http://127.0.0.1:5000/suggest")
-    func getRecipes(_ userData: Data) async -> Data{
+    func getRecipes(_ userData: Data) async throws -> Data{
         var request = URLRequest(url: url!)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         request.httpBody = userData
         do {
-            let (data, x) = try await URLSession.shared.data(for: request)
-            print(data.base64EncodedString())
-            print(x)
+            let (data, response) = try await URLSession.shared.data(for: request)
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else{
+                throw NCError.networkError
+            }
             return data
         } catch {
-            print(error.localizedDescription)
             return Data(userData)
         }
     }

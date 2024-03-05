@@ -13,12 +13,13 @@ struct PrefrenceStartView: View {
         VStack{
             Image("getToKnow").resizable().aspectRatio(contentMode: .fit).frame(width: 380)
             Text("Let's get to know about you!")
-                .font(.largeTitle).multilineTextAlignment(.center).padding()
+                .font(.largeTitle).multilineTextAlignment(.center).padding().foregroundStyle(.hard).bold()
             Button(action: {pageNumber += 1}, label: {
-                Text("Dish Out the Details!").font(.title2).padding(10).frame(maxWidth: .infinity).foregroundStyle(.foreground)
+                Text("Dish Out the Details!").font(.title2).padding(10).frame(maxWidth: .infinity).foregroundStyle(.hard)
             })
             .buttonStyle(.borderedProminent)
-                .padding(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
+            .padding(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
+            .tint(.bright)
         }
     }
 }

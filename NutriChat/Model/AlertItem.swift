@@ -20,4 +20,5 @@ struct AlertContext{
     static let dataNotLoaded = AlertItem(title: "Error loading details", message: "There was an error loading your details", dismissbutton: "Ok")
     static let detailsSaved = AlertItem(title: "Details Saved!", message: "You Details have been saved successfully", dismissbutton: "Done")
     static let detailsNotSaved = AlertItem(title: "Error occurred", message: "You details were not saved", dismissbutton: "Ok")
+    static let networkError = AlertItem(title: "OPPS", message: "We are sorry but there was an error in generating your recipes, please try again!", dismissbutton: "Ok")
 }

@@ -40,7 +40,8 @@ struct AccountView: View {
                     isSelecting = true
                 }
             }
-        }.sheet(isPresented: $isSelecting, content: {
+        }.background(.windowBackground)
+        .sheet(isPresented: $isSelecting, content: {
             PreferencesSelectionView(isSelecting: $isSelecting)
         })
         .alert(alertItem?.title ?? "", isPresented: $isShowingAlert, actions: {

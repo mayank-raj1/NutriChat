@@ -24,7 +24,7 @@ struct MessageReceiveView: View {
             if message.isprocessing{
                 BouncingDots().padding().background(Color(UIColor.systemGray5)).clipShape(.rect(cornerRadius: 15))
             }else {
-                Text(message.message)
+                Text(.init(message.message))
                     .multilineTextAlignment(.leading)
                     .foregroundStyle(.primary)
                     .padding(12)

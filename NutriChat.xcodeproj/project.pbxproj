@@ -42,6 +42,8 @@
 		E5B251162B7BADF700F098CB /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5B251152B7BADF700F098CB /* GenerativeAI-Info.plist */; };
 		E5B251182B7BAE5900F098CB /* GenerativeAI-Info_Sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5B251172B7BAE5900F098CB /* GenerativeAI-Info_Sample.plist */; };
 		E5B2511A2B7BAEA400F098CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E5B251192B7BAEA400F098CB /* .gitignore */; };
+		E5ECC3502B9462B5005E7605 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5ECC34F2B9462B5005E7605 /* Components.swift */; };
+		E5ECC3522B951A6F005E7605 /* NCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5ECC3512B951A6F005E7605 /* NCError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		E5B251152B7BADF700F098CB /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
 		E5B251172B7BAE5900F098CB /* GenerativeAI-Info_Sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info_Sample.plist"; sourceTree = "<group>"; };
 		E5B251192B7BAEA400F098CB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E5ECC34F2B9462B5005E7605 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		E5ECC3512B951A6F005E7605 /* NCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +176,7 @@
 				E58B8CA92B7A0A8C00D9F4B8 /* Preferences */,
 				E58B8CA22B79C03300D9F4B8 /* BouncingDots.swift */,
 				E5692E692B70B6DF001E1885 /* ChatViewWindowView.swift */,
-				E55598022B89063400A1B5EF /* AlertItem.swift */,
+				E5ECC34F2B9462B5005E7605 /* Components.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +184,7 @@
 		E5692E642B70AC27001E1885 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E55598022B89063400A1B5EF /* AlertItem.swift */,
 				E58B8CA62B7A0A3800D9F4B8 /* APIKey */,
 				E5239C7E2B76D55200CD8EBB /* ChatHandler.swift */,
 				E5692E652B70AC3C001E1885 /* Message.swift */,
@@ -187,6 +192,7 @@
 				E57DD54B2B7EEC9F0053C23E /* User.swift */,
 				E57020792B8AB886005DFDDA /* Recipe.swift */,
 				E537F91D2B8CD9C300BC55D7 /* RecipeBook.swift */,
+				E5ECC3512B951A6F005E7605 /* NCError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 				E5B2510E2B7AE3E800F098CB /* PreferencesSelectionView.swift in Sources */,
 				E5692E662B70AC3C001E1885 /* Message.swift in Sources */,
 				E5239C7F2B76D55200CD8EBB /* ChatHandler.swift in Sources */,
+				E5ECC3502B9462B5005E7605 /* Components.swift in Sources */,
 				E58C2A992B85863200C8B07F /* ChatWindowView.swift in Sources */,
 				E5B251122B7BA95900F098CB /* PrefrenceStartView.swift in Sources */,
 				E58B8CAD2B7A0B3600D9F4B8 /* MocData.swift in Sources */,
@@ -322,6 +329,7 @@
 				E5692E6C2B70B75C001E1885 /* MessageReceiveView.swift in Sources */,
 				E58B8CAB2B7A0AAA00D9F4B8 /* DietaryView.swift in Sources */,
 				E570207A2B8AB887005DFDDA /* Recipe.swift in Sources */,
+				E5ECC3522B951A6F005E7605 /* NCError.swift in Sources */,
 				E5692E6A2B70B6DF001E1885 /* ChatViewWindowView.swift in Sources */,
 				E5B251102B7AE47200F098CB /* HealthWellnessView.swift in Sources */,
 				E58B8CAE2B7A10C900D9F4B8 /* APIKey.swift in Sources */,

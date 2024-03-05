@@ -13,7 +13,7 @@ struct ChatWindowView: View {
             VStack{
                 ChatViewWindowView()
                 Divider().frame(height: 12)
-                SendField().padding().background(.background)
+                SendField().padding().background(.background).tint(.bright)
             }
         }
     }

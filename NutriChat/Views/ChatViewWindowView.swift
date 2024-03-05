@@ -14,15 +14,18 @@ struct ChatViewWindowView: View {
             ScrollView{
                 ForEach(chatHandler.messeges) { message in
                     if message.participant == .user{
-                        MessageSentView(message: message)
+                        MessageSentView(message: message).padding(10)
                     }else{
-                        MessageReceiveView(message: message)
+                        MessageReceiveView(message: message).padding(10)
                     }
                 }
                 Spacer()
             }
         }.background {
-            Image("chatBg").brightness(-0.13)
+            ZStack{
+                Image("chatBg")
+                Rectangle().foregroundColor(.cardBackground).opacity(0.5)
+            }
         }
     }
 }

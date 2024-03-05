@@ -7,10 +7,11 @@
 
 import Foundation
 import GoogleGenerativeAI
+import SwiftUI
 
 final class ChatHandler: ObservableObject{
     @Published var messeges: [Message]
-    
+    @AppStorage("user") var userData: Data?
     private let model: GenerativeModel
     private let chat: Chat
     
@@ -18,6 +19,22 @@ final class ChatHandler: ObservableObject{
         self.model = GenerativeModel(name: "gemini-pro", apiKey: APIKey.default)
         self.chat = model.startChat()
         self.messeges = []
+        initialSetup()
+    }
+    
+    func initialSetup(){
+        let prompt = MocDataGenerator.chatPrompt + (String(data: userData!, encoding: .utf8) ?? "")
+        addSystemMessage()
+        Task{
+            do{
+                let response = try await chat.sendMessage(prompt)
+                messeges[messeges.count-1].message = response.text ?? "An error ooucred"
+                messeges[messeges.count-1].isprocessing = false
+            }catch{
+                messeges[messeges.count-1].message = "An error ooucred"
+                messeges[messeges.count-1].isprocessing = false
+            }
+        }
     }
     
     func handle(message: String) async -> Void{
@@ -27,7 +44,6 @@ final class ChatHandler: ObservableObject{
             let response = try await chat.sendMessage(message)
             messeges[messeges.count-1].message = response.text ?? "An error ooucred"
             messeges[messeges.count-1].isprocessing = false
-            //addSystemMessage(message: response.text ?? "Its Tripy")
         }
         catch{
             messeges[messeges.count-1].message = "An error ooucred"

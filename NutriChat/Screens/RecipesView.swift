@@ -8,34 +8,73 @@
 import SwiftUI
 
 struct RecipesView: View {
+    // Data Management
     @AppStorage("user") var userData: Data?
-    @State var recipes: [Recipe] = MocDataGenerator.recipes
+    @State var recipes: [Recipe] = []
+    @State var generating: Bool = false
+    // Alerts
+    @State private var alertItem: AlertItem?
+    @State private var isShowingAlert: Bool = false
+    
     let networkManager = NetworkManager()
     var body: some View {
         ZStack{
             RecipeListVIew(recipes: recipes)
-            if recipes.count==0{
+            if generating {
                 ZStack{
                     Rectangle().foregroundStyle(.background)
-                    Text("Refresh to see recipes!")
+                    VStack{
+                        Image("processing").resizable().scaledToFit().frame(width: 300)
+                        ProgressView().tint(.bright).dynamicTypeSize(.accessibility5)
+                        Text("We are generating personized recipes just for you, it might take a moment.").multilineTextAlignment(.center)
+                            .font(.title2).padding()
+                    }
                 }
             }
+            else if recipes.count==0{
+                EmptyState()
+            }
+            
         }
         .overlay(alignment: .bottomTrailing) {
-            Button(action: {
+            Button {
                 Task{
-                    let response =  await networkManager.getRecipes(userData!)
-                    self.recipes = try JSONDecoder().decode([Recipe].self, from: response)
-                    print(try JSONDecoder().decode([Recipe].self, from: response))
+                    generating = true
+                    do{
+                        let response =  try await networkManager.getRecipes(userData!)
+                        self.recipes = try JSONDecoder().decode([Recipe].self, from: response)
+                    } catch {
+                        alertItem = AlertContext.networkError
+                        isShowingAlert = true
+                    }
+                    generating = false
                 }
-            }, label: {
-                Image(systemName: "wand.and.stars").resizable().scaledToFit().frame(width: 60)
-                    .symbolRenderingMode(.palette).foregroundStyle(.background, .yellow).padding(10)
-            })  .buttonBorderShape(.circle).buttonStyle(.borderedProminent).padding()
+            } label: {
+                Label("Generate", systemImage: "wand.and.stars").dynamicTypeSize(.xLarge).bold()
+                    .foregroundStyle(.hard)
+                    .padding().background(.bright).clipShape(.buttonBorder)
+            }.padding()
         }
+        .alert(alertItem?.title ?? "", isPresented: $isShowingAlert, actions: {
+            Button(alertItem?.dismissbutton ?? "", action: {isShowingAlert = false})
+                   }, message: {
+                       Text(alertItem?.message ?? "")
+            })
     }
 }
 
 #Preview {
     RecipesView()
+}
+
+struct EmptyState: View {
+    var body: some View {
+        ZStack{
+            Rectangle().foregroundStyle(.background)
+            VStack{
+                Image("Empty").resizable().scaledToFit().frame(width: 300)
+                Text("Hit Generate to see recipes!").font(.title2).padding()
+            }
+        }
+    }
 }
