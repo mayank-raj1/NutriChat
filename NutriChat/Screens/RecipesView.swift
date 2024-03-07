@@ -34,7 +34,6 @@ struct RecipesView: View {
             else if recipes.count==0{
                 EmptyState()
             }
-            
         }
         .overlay(alignment: .bottomTrailing) {
             Button {

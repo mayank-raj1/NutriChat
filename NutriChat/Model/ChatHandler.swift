@@ -23,7 +23,7 @@ final class ChatHandler: ObservableObject{
     }
     
     func initialSetup(){
-        let prompt = MocDataGenerator.chatPrompt + (String(data: userData!, encoding: .utf8) ?? "")
+        let prompt = MocDataGenerator.chatPrompt + (String(data: userData! , encoding: .utf8) ?? "")
         addSystemMessage()
         Task{
             do{
