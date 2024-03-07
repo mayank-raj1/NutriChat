@@ -23,7 +23,7 @@ struct ChatViewWindowView: View {
             }
         }.background {
             ZStack{
-                Image("chatBg").resizable().scaledToFit().frame(maxWidth: .infinity)
+                Image("chatBg").resizable()
                 Rectangle().foregroundColor(.cardBackground).opacity(0.5)
             }
         }
