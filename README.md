@@ -4,7 +4,7 @@
 
 ## 🌈 Features 🚀👩‍🍳👨‍🍳
 
-- **Set preferences:** Users can specify their food choices, allergies, medical conditions, and health goals among other preferences.
+- **Set preferences:** Users can specify their food choices, allergies, medical conditions, and health goals among other 15+ preferences for a fine grain control over recipe recommendation.
 - **Personalized recipe generation:** NutriChat recommends unique recipes that cater to your individual taste and nutritional needs, With the Generative model at its core, 
 - **Detailed recipe generation:** Get recipes with detailed information, including tags for dietary restrictions, categories for different meal types, precise ingredient measurements, and step-by-step instructions.
 - **Natural language chat:** You can chat with NutriChat in your everyday language to uncover recipe suggestions that feel like they’re handpicked just for you.
