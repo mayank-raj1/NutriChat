@@ -13,6 +13,25 @@
 - **Simple and User Centric Interface:** It features a user-friendly interface built using SwiftUI for seamless navigation and interaction.
 - **Flask API and Langchain integration:** NutriChat utilizes a Flask API combined with Langchain to generate and out recipes in a structured manner.
 
+## 🎥 Demo Videos 🎥 
+
+Watch the following videos to see NutriChat in action:
+
+1. **Account Detail Setup:** This video demonstrates how to set up account details such as name, age, and gender.:
+<img src="https://github.com/mayank-raj1/NutriChat/blob/c3e380c027438effd1af56e24955d5efe6ede94e/ScreenRecordings/Sequence%2001_1-3.gif" width="220px"/>
+
+2. **Setting Preferences:** Learn how to set all your preferences in NutriChat, including food choices, allergies, and health goals.
+<img src="https://github.com/mayank-raj1/NutriChat/blob/c3e380c027438effd1af56e24955d5efe6ede94e/ScreenRecordings/Sequence%2001_3.gif" width="220px"/>
+
+
+3. **Generating and Viewing Recipes:** See how NutriChat generates and displays personalized recipes based on your preferences.
+<img src="https://github.com/mayank-raj1/NutriChat/blob/c3e380c027438effd1af56e24955d5efe6ede94e/ScreenRecordings/Sequence%2001_4.gif" width="220px"/>
+
+
+4. **Chatting with the Model:** Explore the natural language chat feature and interact with the model to get personalized recipe recommendations.
+<img src="https://github.com/mayank-raj1/NutriChat/blob/c3e380c027438effd1af56e24955d5efe6ede94e/ScreenRecordings/Sequence%2001_2.gif" width="220px"/>
+
+
 
 ## 🛠️ Technologies Used 🛠️
 
