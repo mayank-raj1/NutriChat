@@ -2,7 +2,7 @@
 
 🌟 **NutriChat** is your friendly iOS 📱 companion that helps you discover delicious foods tailored to your dietary preferences! It considers your food choices, allergies, medical conditions, and health goals to suggest recipes that help you eat better. With over 15 customization options, you’ll receive recipes that feel personalized, all thanks to a powerful generative model. Plus, NutriChat offers a conversational experience, providing even more customized recipe options as if you’re chatting with a friend.
 
-[![MainBanner](https://i.postimg.cc/XJN0Tbjk/Frame-19.png)](https://postimg.cc/Y4PVWTmv)
+[![Main-Banner](https://i.postimg.cc/43KvLRPv/Nutrichar-Header-Github.jpg)](https://postimg.cc/DWTb0Dtm)
 
 ## 🌈 Features 🚀👩‍🍳👨‍🍳
 
