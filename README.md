@@ -40,6 +40,8 @@ Watch the following videos to see NutriChat in action:
 - **Flask 🌐:** Integrated with a backend flask API for recipe recommendation and generation.
 - **Langchain 🦜🔗:** Leveraging Langchain for structured interactions with AI models, ensuring smooth communication, incorporating components such as prompt templates, models, JsonOutParser, and chains.
 
+#### Check out the API repo, [NutriChatBackend 🔗 ](https://github.com/mayank-raj1/NutriChatBackend)
+
 ## ⚙️ Getting Started ⚙️
 
 To get started with NutriChat, follow these steps:
